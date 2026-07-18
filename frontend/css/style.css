@@ -1,0 +1,61 @@
+.admin-table {
+
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+    color:#071B33;
+
+}
+
+
+.admin-table th {
+
+    background:#C9A227;
+    padding:15px;
+
+}
+
+
+.admin-table td {
+
+    padding:15px;
+    border-bottom:1px solid #ddd;
+
+}
+
+
+.admin-table button {
+
+    border:none;
+    cursor:pointer;
+
+}.project-form {
+
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+
+.project-form input,
+.project-form select,
+.project-form textarea {
+
+    padding:15px;
+    border-radius:5px;
+    border:none;
+    font-size:16px;
+
+}
+
+
+.project-form textarea {
+
+    height:150px;
+    resize:none;
+
+}

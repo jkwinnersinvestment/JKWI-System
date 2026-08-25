@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reporter Dashboard | JKWI</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/reporter-dashboard.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>JKWI</h2>
+            <span>NEWS</span>
+        </div>
+
+        <nav>
+
+            <a href="reporter-dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="create-article.html">
+                Create Article
+            </a>
+
+            <a href="my-articles.html">
+                My Articles
+            </a>
+
+            <a href="submitted-articles.html">
+                Submitted Articles
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="../login.html">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <p class="page-label">NEWS DEPARTMENT</p>
+                <h1>Reporter Dashboard</h1>
+            </div>
+
+            <div class="profile">
+
+                <div class="profile-info">
+                    <strong>Reporter Name</strong>
+                    <span>Local Business News</span>
+                </div>
+
+                <div class="profile-avatar">
+                    R
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CHANNEL -->
+        <section class="channel-banner">
+
+            <div>
+                <span>ASSIGNED NEWS CHANNEL</span>
+                <h2>Local Business News</h2>
+                <p>
+                    You are currently assigned to the Local Business News channel.
+                </p>
+            </div>
+
+            <div class="channel-status">
+                ACTIVE
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span>Drafts</span>
+                <strong>04</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Submitted</span>
+                <strong>07</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Approved</span>
+                <strong>18</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Rejected</span>
+                <strong>02</strong>
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+        <section class="section">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-label">WORKSPACE</span>
+                    <h2>Quick Actions</h2>
+                </div>
+            </div>
+
+            <div class="action-grid">
+
+                <a href="create-article.html" class="action-card">
+
+                    <div class="action-icon">
+                        +
+                    </div>
+
+                    <div>
+                        <h3>Create Article</h3>
+                        <p>Write and save a new news article.</p>
+                    </div>
+
+                </a>
+
+
+                <a href="my-articles.html" class="action-card">
+
+                    <div class="action-icon">
+                        A
+                    </div>
+
+                    <div>
+                        <h3>My Articles</h3>
+                        <p>View and manage your articles.</p>
+                    </div>
+
+                </a>
+
+
+                <a href="submitted-articles.html" class="action-card">
+
+                    <div class="action-icon">
+                        S
+                    </div>
+
+                    <div>
+                        <h3>Submitted Articles</h3>
+                        <p>Track articles waiting for manager review.</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENT ARTICLES -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">RECENT ACTIVITY</span>
+                    <h2>Recent Articles</h2>
+                </div>
+
+                <a href="my-articles.html" class="view-all">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Article</th>
+                            <th>Channel</th>
+                            <th>Status</th>
+                            <th>Updated</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    South African Mining Sector Shows Growth
+                                </strong>
+                            </td>
+
+                            <td>
+                                Local Business News
+                            </td>
+
+                            <td>
+                                <span class="status draft">
+                                    Draft
+                                </span>
+                            </td>
+
+                            <td>
+                                Today
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    New Infrastructure Investment Announced
+                                </strong>
+                            </td>
+
+                            <td>
+                                Local Business News
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending Review
+                                </span>
+                            </td>
+
+                            <td>
+                                Yesterday
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    Mining Equipment Market Expands
+                                </strong>
+                            </td>
+
+                            <td>
+                                Local Business News
+                            </td>
+
+                            <td>
+                                <span class="status approved">
+                                    Approved
+                                </span>
+                            </td>
+
+                            <td>
+                                2 days ago
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

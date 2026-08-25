@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Customer Dashboard | JK Winners Investment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link
+        rel="stylesheet"
+        href="../css/customer-dashboard.css"
+    >
+</head>
+<body>
+<!-- ==========================================
+     DASHBOARD
+========================================== -->
+<div class="dashboard">
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+    <aside class="sidebar" id="sidebar">
+        <!-- LOGO -->
+        <a
+            href="../index.html"
+            class="sidebar-logo"
+        >
+            <img
+                src="../images/logo.png"
+                alt="JK Winners Investment"
+            >
+            <div>
+                <strong>
+                    JK Winners
+                </strong>
+                <span>
+                    Investment
+                </span>
+            </div>
+        </a>
+        <!-- NAVIGATION -->
+        <nav class="dashboard-nav">
+            <a
+                href="#"
+                class="nav-item active"
+                data-section="overview"
+            >
+                <span class="nav-icon">
+                    ⌂
+                </span>
+                <span>
+                    Overview
+                </span>
+            </a>
+            <a
+                href="#"
+                class="nav-item"
+                data-section="investments"
+            >
+                <span class="nav-icon">
+                    ◈
+                </span>
+                <span>
+                    My Investments
+                </span>
+            </a>
+            <a
+                href="#"
+                class="nav-item"
+                data-section="projects"
+            >
+                <span class="nav-icon">
+                    ▣
+                </span>
+                <span>
+                    Projects
+                </span>
+            </a>
+            <a
+                href="#"
+                class="nav-item"
+                data-section="documents"
+            >
+                <span class="nav-icon">
+                    ▤
+                </span>
+                <span>
+                    Documents
+                </span>
+            </a>
+            <a
+                href="#"
+                class="nav-item"
+                data-section="messages"
+            >
+                <span class="nav-icon">
+                    ◌
+                </span>
+                <span>
+                    Messages
+                </span>
+            </a>
+            <a
+                href="#"
+                class="nav-item"
+                data-section="profile"
+            >
+                <span class="nav-icon">
+                    ○
+                </span>
+                <span>
+                    My Profile
+                </span>
+            </a>
+            <a
+                href="#"
+                class="nav-item"
+                data-section="settings"
+            >
+                <span class="nav-icon">
+                    ⚙
+                </span>
+                <span>
+                    Settings
+                </span>
+            </a>
+        </nav>
+        <!-- SIDEBAR BOTTOM -->
+        <div class="sidebar-bottom">
+            <button
+                type="button"
+                id="logoutButton"
+                class="logout-button"
+            >
+                <span>
+                    ⇥
+                </span>
+                Logout
+            </button>
+        </div>
+    </aside>
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+    <main class="main-content">
+        <!-- ==========================================
+             TOPBAR
+        =========================================== -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button
+                    type="button"
+                    class="mobile-menu"
+                    id="mobileMenu"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+                <div>
+                    <span class="topbar-label">
+                        CUSTOMER PORTAL
+                    </span>
+                    <h1>
+                        Dashboard
+                    </h1>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <button
+                    type="button"
+                    class="notification-button"
+                    aria-label="Notifications"
+                >
+                    ♢
+                    <span class="notification-dot"></span>
+                </button>
+                <div class="user-mini">
+                    <div
+                        class="user-avatar"
+                        id="userAvatar"
+                    >
+                        T
+                    </div>
+                    <div class="user-mini-info">
+                        <strong id="topUserName">
+                            Customer
+                        </strong>
+                        <span>
+                            Customer
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ==========================================
+             PAGE CONTENT
+        =========================================== -->
+        <div class="content">
+            <!-- ======================================
+                 WELCOME
+            ======================================= -->
+            <section class="welcome-card">
+                <div>
+                    <span class="welcome-label">
+                        JK WINNERS INVESTMENT
+                    </span>
+                    <h2>
+                        Welcome back,
+                        <span id="welcomeName">
+                            Customer
+                        </span>
+                    </h2>
+                    <p>
+                        Manage your JKWI account, investments,
+                        projects and documents from your customer portal.
+                    </p>
+                </div>
+                <div class="account-status">
+                    <span>
+                        ACCOUNT STATUS
+                    </span>
+                    <strong id="accountStatus">
+                        Active
+                    </strong>
+                </div>
+            </section>
+            <!-- ======================================
+                 ACCOUNT INFORMATION
+            ======================================= -->
+            <section class="account-strip">
+                <div class="account-item">
+                    <span>
+                        WINNERS ID
+                    </span>
+                    <strong id="winnersId">
+                        —
+                    </strong>
+                </div>
+                <div class="account-item">
+                    <span>
+                        ACCOUNT TYPE
+                    </span>
+                    <strong id="accountType">
+                        Customer
+                    </strong>
+                </div>
+                <div class="account-item">
+                    <span>
+                        EMAIL
+                    </span>
+                    <strong id="userEmail">
+                        —
+                    </strong>
+                </div>
+                <div class="account-item">
+                    <span>
+                        VERIFICATION
+                    </span>
+                    <strong class="verified">
+                        Verified
+                    </strong>
+                </div>
+            </section>
+            <!-- ======================================
+                 OVERVIEW
+            ======================================= -->
+            <section
+                class="dashboard-section active"
+                id="overview"
+            >
+                <div class="section-heading">
+                    <div>
+                        <span>
+                            ACCOUNT OVERVIEW
+                        </span>
+                        <h2>
+                            Your Dashboard
+                        </h2>
+                    </div>
+                </div>
+                <div class="overview-grid">
+                    <div class="dashboard-card">
+                        <span class="card-label">
+                            TOTAL INVESTMENTS
+                        </span>
+                        <strong>
+                            R0.00
+                        </strong>
+                        <small>
+                            No investments yet
+                        </small>
+                    </div>
+                    <div class="dashboard-card">
+                        <span class="card-label">
+                            ACTIVE PROJECTS
+                        </span>
+                        <strong>
+                            0
+                        </strong>
+                        <small>
+                            Current projects
+                        </small>
+                    </div>
+                    <div class="dashboard-card">
+                        <span class="card-label">
+                            DOCUMENTS
+                        </span>
+                        <strong>
+                            0
+                        </strong>
+                        <small>
+                            Available documents
+                        </small>
+                    </div>
+                    <div class="dashboard-card">
+                        <span class="card-label">
+                            MESSAGES
+                        </span>
+                        <strong>
+                            0
+                        </strong>
+                        <small>
+                            Unread messages
+                        </small>
+                    </div>
+                </div>
+                <div class="dashboard-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span>
+                                QUICK ACCESS
+                            </span>
+                            <h3>
+                                Customer Services
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="quick-grid">
+                        <button
+                            type="button"
+                            class="quick-card"
+                            data-section="investments"
+                        >
+                            <span>
+                                ◈
+                            </span>
+                            <strong>
+                                Investments
+                            </strong>
+                            <small>
+                                View your investments
+                            </small>
+                        </button>
+                        <button
+                            type="button"
+                            class="quick-card"
+                            data-section="projects"
+                        >
+                            <span>
+                                ▣
+                            </span>
+                            <strong>
+                                Projects
+                            </strong>
+                            <small>
+                                Explore JKWI projects
+                            </small>
+                        </button>
+                        <button
+                            type="button"
+                            class="quick-card"
+                            data-section="documents"
+                        >
+                            <span>
+                                ▤
+                            </span>
+                            <strong>
+                                Documents
+                            </strong>
+                            <small>
+                                Manage your documents
+                            </small>
+                        </button>
+                        <button
+                            type="button"
+                            class="quick-card"
+                            data-section="messages"
+                        >
+                            <span>
+                                ◌
+                            </span>
+                            <strong>
+                                Messages
+                            </strong>
+                            <small>
+                                Contact JKWI
+                            </small>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- ======================================
+                 INVESTMENTS
+            ======================================= -->
+            <section
+                class="dashboard-section"
+                id="investments"
+            >
+                <div class="section-heading">
+                    <span>
+                        INVESTMENTS
+                    </span>
+                    <h2>
+                        My Investments
+                    </h2>
+                </div>
+                <div class="empty-state">
+                    <div>
+                        ◈
+                    </div>
+                    <h3>
+                        No Investments Yet
+                    </h3>
+                    <p>
+                        Your investments will appear here once
+                        you participate in an eligible JKWI opportunity.
+                    </p>
+                </div>
+            </section>
+            <!-- ======================================
+                 PROJECTS
+            ======================================= -->
+            <section
+                class="dashboard-section"
+                id="projects"
+            >
+                <div class="section-heading">
+                    <span>
+                        PROJECTS
+                    </span>
+                    <h2>
+                        JKWI Projects
+                    </h2>
+                </div>
+                <div class="empty-state">
+                    <div>
+                        ▣
+                    </div>
+                    <h3>
+                        Projects
+                    </h3>
+                    <p>
+                        Project information and opportunities
+                        will appear here.
+                    </p>
+                </div>
+            </section>
+            <!-- ======================================
+                 DOCUMENTS
+            ======================================= -->
+            <section
+                class="dashboard-section"
+                id="documents"
+            >
+                <div class="section-heading">
+                    <span>
+                        DOCUMENT CENTRE
+                    </span>
+                    <h2>
+                        My Documents
+                    </h2>
+                </div>
+                <div class="empty-state">
+                    <div>
+                        ▤
+                    </div>
+                    <h3>
+                        No Documents
+                    </h3>
+                    <p>
+                        Your official JKWI documents will appear here.
+                    </p>
+                </div>
+            </section>
+            <!-- ======================================
+                 MESSAGES
+            ======================================= -->
+            <section
+                class="dashboard-section"
+                id="messages"
+            >
+                <div class="section-heading">
+                    <span>
+                        COMMUNICATION
+                    </span>
+                    <h2>
+                        Messages
+                    </h2>
+                </div>
+                <div class="empty-state">
+                    <div>
+                        ◌
+                    </div>
+                    <h3>
+                        No Messages
+                    </h3>
+                    <p>
+                        Messages from JKWI will appear here.
+                    </p>
+                </div>
+            </section>
+            <!-- ======================================
+                 PROFILE
+            ======================================= -->
+            <section
+                class="dashboard-section"
+                id="profile"
+            >
+                <div class="section-heading">
+                    <span>
+                        ACCOUNT
+                    </span>
+                    <h2>
+                        My Profile
+                    </h2>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-avatar" id="profileAvatar">
+                        T
+                    </div>
+                    <div class="profile-details">
+                        <h3 id="profileName">
+                            Customer
+                        </h3>
+                        <p id="profileEmail">
+                            —
+                        </p>
+                        <p>
+                            Winners ID:
+                            <strong id="profileWinnersId">
+                                —
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- ======================================
+                 SETTINGS
+            ======================================= -->
+            <section
+                class="dashboard-section"
+                id="settings"
+            >
+                <div class="section-heading">
+                    <span>
+                        ACCOUNT SETTINGS
+                    </span>
+                    <h2>
+                        Settings
+                    </h2>
+                </div>
+                <div class="settings-card">
+                    <h3>
+                        Account Security
+                    </h3>
+                    <p>
+                        Manage your account security and login settings.
+                    </p>
+                    <button
+                        type="button"
+                        class="secondary-button"
+                    >
+                        Change Password
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="../js/customer-dashboard.js"></script>
+</body>
+</html>

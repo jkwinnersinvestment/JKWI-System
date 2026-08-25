@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Article | JKWI News</title>
+
+    <link rel="stylesheet" href="../css/reporter-dashboard.css">
+    <link rel="stylesheet" href="../css/create-article.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>JKWI</h2>
+            <span>NEWS</span>
+        </div>
+
+        <nav>
+            <a href="reporter-dashboard.html">Dashboard</a>
+            <a href="create-article.html" class="active">Create Article</a>
+            <a href="my-articles.html">My Articles</a>
+            <a href="submitted-articles.html">Submitted Articles</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="../login.html">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <p class="page-label">NEWS DEPARTMENT</p>
+                <h1>Create Article</h1>
+            </div>
+
+            <div class="profile">
+
+                <div class="profile-info">
+                    <strong>Reporter Name</strong>
+                    <span>Local Business News</span>
+                </div>
+
+                <div class="profile-avatar">
+                    R
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CHANNEL NOTICE -->
+        <section class="channel-notice">
+
+            <div>
+                <span>ASSIGNED CHANNEL</span>
+                <h2>Local Business News</h2>
+            </div>
+
+            <p>
+                Articles submitted from this account will be sent
+                to the News Manager for review.
+            </p>
+
+        </section>
+
+
+        <!-- ARTICLE FORM -->
+        <section class="article-editor">
+
+            <div class="editor-header">
+
+                <div>
+                    <span class="section-label">ARTICLE EDITOR</span>
+                    <h2>New Article</h2>
+                </div>
+
+                <span class="draft-status">
+                    DRAFT
+                </span>
+
+            </div>
+
+
+            <form id="articleForm">
+
+                <!-- HEADLINE -->
+                <div class="form-group">
+
+                    <label for="headline">
+                        Headline
+                    </label>
+
+                    <input
+                        type="text"
+                        id="headline"
+                        name="headline"
+                        placeholder="Enter article headline"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- SUBHEADLINE -->
+                <div class="form-group">
+
+                    <label for="subheadline">
+                        Subheadline
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subheadline"
+                        name="subheadline"
+                        placeholder="Enter a short description"
+                    >
+
+                </div>
+
+
+                <!-- ARTICLE BODY -->
+                <div class="form-group">
+
+                    <label for="articleBody">
+                        Article
+                    </label>
+
+                    <textarea
+                        id="articleBody"
+                        name="articleBody"
+                        rows="18"
+                        placeholder="Write your article here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SOURCE -->
+                <div class="form-group">
+
+                    <label for="source">
+                        Source
+                    </label>
+
+                    <input
+                        type="text"
+                        id="source"
+                        name="source"
+                        placeholder="Enter source or reference"
+                    >
+
+                </div>
+
+
+                <!-- IMAGE -->
+                <div class="form-group">
+
+                    <label for="articleImage">
+                        Featured Image
+                    </label>
+
+                    <input
+                        type="file"
+                        id="articleImage"
+                        name="articleImage"
+                        accept="image/*"
+                    >
+
+                    <small>
+                        Recommended: lightweight optimized image.
+                    </small>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+                <div class="editor-actions">
+
+                    <button
+                        type="button"
+                        class="btn-secondary"
+                        id="saveDraft">
+                        Save Draft
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn-primary">
+                        Submit for Review
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- APPROVAL RULE -->
+        <section class="approval-notice">
+
+            <strong>Editorial Approval Required</strong>
+
+            <p>
+                Submitting this article does not publish it.
+                A News Manager must review and approve the article
+                before it can appear on JKWI News.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/create-article.js"></script>
+
+</body>
+</html>

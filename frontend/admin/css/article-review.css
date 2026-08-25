@@ -1,0 +1,252 @@
+.article-header {
+    background: #ffffff;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.channel-tag {
+    display: inline-block;
+    background: #e5f4ff;
+    color: #009EF3;
+    padding: 6px 9px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.article-header h2 {
+    margin: 12px 0 8px;
+    font-size: 27px;
+}
+
+.article-meta {
+    color: #7a8492;
+    font-size: 12px;
+}
+
+.review-status {
+    height: fit-content;
+    background: #fff3d9;
+    color: #98701c;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* REVIEW LAYOUT */
+
+.review-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    gap: 25px;
+}
+
+
+/* ARTICLE BODY */
+
+.article-body {
+    background: #ffffff;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.featured-image {
+    height: 260px;
+    background: #edf1f5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7a8492;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.article-body h3 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.article-body p {
+    color: #4f5b6b;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.source-box {
+    border-top: 1px solid #e5e9ef;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.source-box strong {
+    font-size: 12px;
+}
+
+.source-box p {
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+
+/* REVIEW PANEL */
+
+.review-panel {
+    background: #ffffff;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+    padding: 25px;
+    height: fit-content;
+}
+
+.panel-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e9ef;
+}
+
+.panel-header h2 {
+    margin-top: 6px;
+    font-size: 20px;
+}
+
+.review-info {
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e9ef;
+}
+
+.review-info div {
+    margin-bottom: 15px;
+}
+
+.review-info div:last-child {
+    margin-bottom: 0;
+}
+
+.review-info span {
+    display: block;
+    color: #7a8492;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.review-info strong {
+    font-size: 13px;
+}
+
+.review-panel label {
+    display: block;
+    margin: 20px 0 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.review-panel textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    border: 1px solid #dfe4ea;
+    border-radius: 7px;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+}
+
+.review-panel textarea:focus {
+    border-color: #009EF3;
+}
+
+
+/* BUTTONS */
+
+.decision-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.decision-buttons button {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.request-btn {
+    background: #fff3d9;
+    color: #98701c;
+}
+
+.reject-btn {
+    background: #fde8e8;
+    color: #b43c3c;
+}
+
+.approve-btn {
+    background: #009EF3;
+    color: #ffffff;
+}
+
+.approve-btn:hover {
+    background: #008bd6;
+}
+
+.approval-warning {
+    margin-top: 18px;
+    padding: 15px;
+    background: #e5f4ff;
+    border-left: 3px solid #009EF3;
+    border-radius: 5px;
+}
+
+.approval-warning strong {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.approval-warning p {
+    color: #667386;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .review-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .article-header {
+        flex-direction: column;
+    }
+
+    .article-header h2 {
+        font-size: 22px;
+    }
+
+    .article-body {
+        padding: 20px;
+    }
+}

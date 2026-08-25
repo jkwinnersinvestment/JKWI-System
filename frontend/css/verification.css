@@ -1,0 +1,319 @@
+/* ==========================================
+   JK WINNERS INVESTMENT
+   VERIFICATION PORTAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.verification-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.verification-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.jkwi-logo {
+    width: 95px;
+    height: auto;
+    max-height: 70px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   ICON
+========================================== */
+
+.verification-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf2ff;
+    color: #1261d6;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+h1 {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #697386;
+    margin-bottom: 22px;
+}
+
+
+/* ==========================================
+   EMAIL BOX
+========================================== */
+
+.email-box {
+    background: #f6f8fc;
+    border: 1px solid #e3e8f0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 18px;
+}
+
+.email-box span {
+    display: block;
+    font-size: 11px;
+    color: #7a8495;
+    margin-bottom: 4px;
+}
+
+.email-box strong {
+    display: block;
+    font-size: 14px;
+    color: #172033;
+    word-break: break-word;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.primary-button {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 9px;
+
+    background: #1261d6;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+.primary-button:hover {
+    opacity: 0.92;
+}
+
+.primary-button:active {
+    transform: scale(0.98);
+}
+
+.primary-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   MESSAGE
+========================================== */
+
+.message {
+    min-height: 20px;
+    margin: 14px 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.message.success {
+    color: #16834b;
+}
+
+.message.error {
+    color: #d33b3b;
+}
+
+
+/* ==========================================
+   CODE SECTION
+========================================== */
+
+.code-section {
+    display: none;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #edf0f5;
+}
+
+.code-section.active {
+    display: block;
+}
+
+.code-section label {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   CODE INPUT
+========================================== */
+
+#verificationCode {
+    width: 100%;
+    height: 54px;
+
+    border: 1px solid #d8dee8;
+    border-radius: 9px;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 8px;
+
+    color: #172033;
+
+    margin-bottom: 12px;
+}
+
+#verificationCode:focus {
+    border-color: #1261d6;
+    box-shadow: 0 0 0 3px rgba(18, 97, 214, 0.10);
+}
+
+
+/* ==========================================
+   RESEND
+========================================== */
+
+.resend-button {
+    margin-top: 12px;
+
+    border: none;
+    background: transparent;
+
+    color: #1261d6;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.resend-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   BACK TO LOGIN
+========================================== */
+
+.back-login {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    color: #697386;
+
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.back-login:hover {
+    color: #1261d6;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .verification-page {
+        padding: 14px;
+    }
+
+    .verification-card {
+        max-width: 100%;
+        padding: 27px 20px;
+        border-radius: 15px;
+    }
+
+    .jkwi-logo {
+        width: 82px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    #verificationCode {
+        height: 52px;
+        font-size: 22px;
+        letter-spacing: 6px;
+    }
+
+}

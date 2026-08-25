@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Super Admin Dashboard | JKWI</title>
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     SIDEBAR
+========================================== -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            JKWI
+        </div>
+
+        <div>
+            <strong>JK WINNERS</strong>
+            <span>INVESTMENT</span>
+        </div>
+
+    </div>
+
+
+    <nav class="navigation">
+
+        <a
+            href="dashboard.html"
+            class="active"
+        >
+            Dashboard
+        </a>
+
+
+        <div class="nav-section">
+            MANAGEMENT
+        </div>
+
+
+        <a href="news/reporter-dashboard.html">
+            News
+        </a>
+
+        <a href="news-manager/dashboard.html">
+            News Manager
+        </a>
+
+        <a href="markets/dashboard.html">
+            Market Manager
+        </a>
+
+        <a href="store/products.html">
+            Admin Store
+        </a>
+
+
+        <div class="nav-section">
+            BUSINESS
+        </div>
+
+
+        <a href="projects.html">
+            Projects
+        </a>
+
+        <a href="investors.html">
+            Investors
+        </a>
+
+        <a href="documents.html">
+            Documents
+        </a>
+
+        <a href="specialists.html">
+            Specialists
+        </a>
+
+        <a href="customers.html">
+            Customers
+        </a>
+
+        <a href="workers.html">
+            Workers
+        </a>
+
+
+        <div class="nav-section">
+            SYSTEM
+        </div>
+
+
+        <a href="settings.html">
+            Settings
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <button id="logoutButton">
+            Logout
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- ==========================================
+     MAIN
+========================================== -->
+
+<main class="main-content">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div>
+
+            <span class="page-label">
+                JKWI ADMINISTRATION
+            </span>
+
+            <h1>
+                Super Admin Dashboard
+            </h1>
+
+        </div>
+
+
+        <div class="user-area">
+
+            <div class="user-info">
+
+                <strong id="username">
+                    Administrator
+                </strong>
+
+                <span id="role">
+                    Super Admin
+                </span>
+
+            </div>
+
+
+            <div class="avatar">
+                SA
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         WELCOME
+    ========================================== -->
+
+    <section class="welcome">
+
+        <div>
+
+            <span>
+                CONTROL CENTRE
+            </span>
+
+            <h2>
+                Welcome back.
+            </h2>
+
+            <p>
+                Manage JKWI operations, news, markets,
+                projects and business activities from
+                one central platform.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         STATISTICS
+    ========================================== -->
+
+    <section class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <span>
+                News Articles
+            </span>
+
+            <strong>
+                128
+            </strong>
+
+            <small>
+                Published
+            </small>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>
+                Pending Reviews
+            </span>
+
+            <strong>
+                14
+            </strong>
+
+            <small>
+                Awaiting News Manager
+            </small>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>
+                Active Projects
+            </span>
+
+            <strong>
+                12
+            </strong>
+
+            <small>
+                JKWI Projects
+            </small>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>
+                Platform Users
+            </span>
+
+            <strong>
+                246
+            </strong>
+
+            <small>
+                Registered Accounts
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         QUICK ACCESS
+    ========================================== -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    QUICK ACCESS
+                </span>
+
+                <h2>
+                    Platform Management
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="management-grid">
+
+
+            <a
+                href="news-manager/dashboard.html"
+                class="management-card"
+            >
+
+                <div class="card-icon">
+                    N
+                </div>
+
+                <div>
+
+                    <h3>
+                        News Manager
+                    </h3>
+
+                    <p>
+                        Review and approve submitted
+                        news articles.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <a
+                href="markets/dashboard.html"
+                class="management-card"
+            >
+
+                <div class="card-icon">
+                    M
+                </div>
+
+                <div>
+
+                    <h3>
+                        Market Manager
+                    </h3>
+
+                    <p>
+                        Manage local and international
+                        market information.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <a
+                href="store/products.html"
+                class="management-card"
+            >
+
+                <div class="card-icon">
+                    S
+                </div>
+
+                <div>
+
+                    <h3>
+                        Admin Store
+                    </h3>
+
+                    <p>
+                        Manage products, services,
+                        prices and stock.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <a
+                href="projects.html"
+                class="management-card"
+            >
+
+                <div class="card-icon">
+                    P
+                </div>
+
+                <div>
+
+                    <h3>
+                        Projects
+                    </h3>
+
+                    <p>
+                        Monitor JKWI projects and
+                        operations.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         NEWS OVERVIEW
+    ========================================== -->
+
+    <section class="section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    NEWS
+                </span>
+
+                <h2>
+                    News Channels
+                </h2>
+
+            </div>
+
+
+            <a href="news-manager/dashboard.html">
+                Manage News
+            </a>
+
+        </div>
+
+
+        <div class="news-grid">
+
+
+            <div class="news-channel">
+
+                <span>
+                    LOCAL
+                </span>
+
+                <h3>
+                    Local Business News
+                </h3>
+
+                <strong>
+                    32
+                </strong>
+
+                <small>
+                    Articles
+                </small>
+
+            </div>
+
+
+            <div class="news-channel">
+
+                <span>
+                    INTERNATIONAL
+                </span>
+
+                <h3>
+                    International Business News
+                </h3>
+
+                <strong>
+                    27
+                </strong>
+
+                <small>
+                    Articles
+                </small>
+
+            </div>
+
+
+            <div class="news-channel">
+
+                <span>
+                    LOCAL MARKETS
+                </span>
+
+                <h3>
+                    Local Market News
+                </h3>
+
+                <strong>
+                    41
+                </strong>
+
+                <small>
+                    Articles
+                </small>
+
+            </div>
+
+
+            <div class="news-channel">
+
+                <span>
+                    INTERNATIONAL MARKETS
+                </span>
+
+                <h3>
+                    International Markets News
+                </h3>
+
+                <strong>
+                    28
+                </strong>
+
+                <small>
+                    Articles
+                </small>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

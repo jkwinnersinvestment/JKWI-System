@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verify Account | JK Winners Investment</title>
+
+    <link rel="stylesheet" href="css/verification.css">
+</head>
+
+<body>
+
+    <main class="verification-page">
+
+        <section class="verification-card">
+
+            <img
+                src="images/logo.png"
+                alt="JK Winners Investment"
+                class="jkwi-logo"
+            >
+
+            <div class="verification-icon">✓</div>
+
+            <h1>Verify Your Account</h1>
+
+            <p class="subtitle">
+                We've created your JKWI account.
+                Verify your email address to continue.
+            </p>
+
+            <div class="email-box">
+                <span>Verification email</span>
+                <strong id="emailDisplay">Your email</strong>
+            </div>
+
+            <button
+                type="button"
+                id="sendCodeButton"
+                class="primary-button"
+            >
+                Send Verification Code
+            </button>
+
+            <div
+                id="message"
+                class="message"
+                aria-live="polite"
+            ></div>
+
+            <div
+                id="codeSection"
+                class="code-section"
+            >
+
+                <label for="verificationCode">
+                    Enter 6-digit code
+                </label>
+
+                <input
+                    id="verificationCode"
+                    type="text"
+                    inputmode="numeric"
+                    autocomplete="one-time-code"
+                    maxlength="6"
+                    placeholder="000000"
+                    aria-label="6-digit verification code"
+                >
+
+                <button
+                    type="button"
+                    id="verifyButton"
+                    class="primary-button"
+                >
+                    Verify Account
+                </button>
+
+                <button
+                    type="button"
+                    id="resendButton"
+                    class="resend-button"
+                >
+                    Resend Code
+                </button>
+
+            </div>
+
+            <a href="login.html" class="back-login">
+                Back to Login
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="js/verification.js"></script>
+
+</body>
+</html>

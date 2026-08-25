@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Store Prices | JKWI</title>
+
+    <link rel="stylesheet" href="../css/reporter-dashboard.css">
+    <link rel="stylesheet" href="../css/store-prices.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <h2>JKWI</h2>
+        <span>ADMIN STORE</span>
+    </div>
+
+    <nav>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="prices.html" class="active">Prices</a>
+        <a href="stock.html">Stock</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="../login.html">Logout</a>
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+            <p class="page-label">ADMIN STORE</p>
+            <h1>Prices</h1>
+        </div>
+
+        <div class="profile">
+
+            <div class="profile-info">
+                <strong>Store Administrator</strong>
+                <span>Price Management</span>
+            </div>
+
+            <div class="profile-avatar">
+                SA
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- BANNER -->
+
+    <section class="price-banner">
+
+        <div>
+            <span>STORE PRICE MANAGEMENT</span>
+
+            <h2>Product & Service Prices</h2>
+
+            <p>
+                Manage the prices displayed for JKWI products
+                and services.
+            </p>
+        </div>
+
+        <button id="addPriceBtn">
+            + Add Price
+        </button>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="summary-grid">
+
+        <div class="summary-card">
+            <span>Total Price Records</span>
+            <strong>42</strong>
+        </div>
+
+        <div class="summary-card">
+            <span>Products</span>
+            <strong>28</strong>
+        </div>
+
+        <div class="summary-card">
+            <span>Services</span>
+            <strong>14</strong>
+        </div>
+
+        <div class="summary-card">
+            <span>Last Updated</span>
+            <strong>18:45</strong>
+        </div>
+
+    </section>
+
+
+    <!-- FILTERS -->
+
+    <section class="toolbar">
+
+        <input
+            type="search"
+            id="priceSearch"
+            placeholder="Search products or services..."
+        >
+
+        <select id="typeFilter">
+
+            <option value="all">
+                All
+            </option>
+
+            <option value="product">
+                Products
+            </option>
+
+            <option value="service">
+                Services
+            </option>
+
+        </select>
+
+    </section>
+
+
+    <!-- TABLE -->
+
+    <section class="price-container">
+
+        <div class="table-header">
+
+            <div>
+                <span class="section-label">
+                    STORE PRICE DATABASE
+                </span>
+
+                <h2>Current Prices</h2>
+            </div>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Currency</th>
+                        <th>Status</th>
+                        <th>Updated</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="priceTable">
+
+                    <tr>
+                        <td><strong>Coal</strong></td>
+                        <td>Product</td>
+                        <td>Mining</td>
+                        <td>R1,480</td>
+                        <td>ZAR</td>
+                        <td class="active-status">Active</td>
+                        <td>18:45</td>
+                        <td>
+                            <button class="edit-btn">
+                                Edit
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Iron Ore</strong></td>
+                        <td>Product</td>
+                        <td>Mining</td>
+                        <td>R1,920</td>
+                        <td>ZAR</td>
+                        <td class="active-status">Active</td>
+                        <td>18:40</td>
+                        <td>
+                            <button class="edit-btn">
+                                Edit
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Mining Services</strong></td>
+                        <td>Service</td>
+                        <td>Mining</td>
+                        <td>Quote</td>
+                        <td>ZAR</td>
+                        <td class="active-status">Active</td>
+                        <td>18:35</td>
+                        <td>
+                            <button class="edit-btn">
+                                Edit
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Truck & Transport</strong></td>
+                        <td>Service</td>
+                        <td>Transport</td>
+                        <td>Quote</td>
+                        <td>ZAR</td>
+                        <td class="active-status">Active</td>
+                        <td>18:30</td>
+                        <td>
+                            <button class="edit-btn">
+                                Edit
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/store-prices.js"></script>
+
+</body>
+</html>

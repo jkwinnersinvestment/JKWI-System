@@ -1,0 +1,9 @@
+{
+  "firstName": "Otsile",
+  "lastName": "Tlale",
+  "email": "otsiletlale012@gmail.com",
+  "phone": "0723456789",
+  "password": "TestPass123!",
+  "confirmPassword": "TestPass123!",
+  "accountType": "customer"
+}

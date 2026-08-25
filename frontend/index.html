@@ -1,41 +1,1255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
     <title>JK Winners Investment</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/global.css">
+
+    <link rel="stylesheet" href="css/home.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
 </head>
+
 <body>
 
-<header>
-    <h1>JK Winners Investment</h1>
-    <p>Mining | Farming | Finance | Infrastructure | Social | Legal | Media</p>
+<!--==================================================
+SECTION 01 - NAVIGATION
+===================================================-->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images/logo.png"
+                alt="JK Winners Investment Logo"
+            >
+
+            <div class="logo-text">
+
+                <h2>JK Winners Investment</h2>
+
+                <span>Assisting Companies</span>
+
+            </div>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html" class="active">
+                    Home
+                </a>
+            </li>
+
+            <li class="dropdown">
+
+                <a href="#">
+                    About
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="about.html">
+                            Company Overview
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Chairman's Message
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Vision & Mission
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Our History
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="#">
+                    Divisions
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="mining.html">
+                            Mining
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="infrastructure.html">
+                            Infrastructure
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="finance.html">
+                            Finance
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="legal.html">
+                            Legal Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="media.html">
+                            Media
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            Professional Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="farming.html">
+                            Agriculture
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="social.html">
+                            Social Development
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="#">
+                    Projects
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="projects.html">
+                            Current Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Completed Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Partnerships
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="investor.html">
+                    Investor Centre
+                </a>
+            </li>
+
+
+            <li>
+                <a href="news.html">
+                    News
+                </a>
+            </li>
+
+
+            <li>
+                <a href="careers.html">
+                    Careers
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="nav-right">
+
+            <a
+                href="login.html"
+                class="nav-login"
+            >
+                Login
+            </a>
+
+            <a
+                href="register.html"
+                class="nav-register"
+            >
+                Register
+            </a>
+
+            <button class="contact-btn">
+                Get in Touch
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div class="menu-toggle">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </div>
+
+    </nav>
+
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="login.html">Login</a>
-    <a href="register.html">Register</a>
-</nav>
 
-<main>
-    <h2>Welcome to JK Winners Investment</h2>
+<!--==================================================
+SECTION 02 - HERO
+===================================================-->
 
-    <p>
-        Building sustainable opportunities through mining, farming,
-        finance, infrastructure, legal services, media and social development.
-    </p>
+<section class="hero" id="home">
 
-    <button>Become an Investor</button>
-</main>
+    <div class="hero-bg-shape shape-1"></div>
 
-<footer>
-    <p>© 2026 JK Winners Investment. All Rights Reserved.</p>
+    <div class="hero-bg-shape shape-2"></div>
+
+    <div class="hero-bg-shape shape-3"></div>
+
+
+    <div class="hero-container">
+
+        <div class="hero-logo">
+
+            <img
+                src="images/logo.png"
+                alt="JK Winners Investment Logo"
+            >
+
+        </div>
+
+
+        <div class="hero-content">
+
+            <span class="hero-subtitle">
+                STRATEGIC BUSINESS SOLUTIONS
+            </span>
+
+            <h1>
+                JK Winners Investment
+            </h1>
+
+            <p>
+                Assisting companies operating across strategic sectors that
+                drive South Africa's economy through expertise, innovation,
+                sustainable partnerships and long-term business growth.
+            </p>
+
+            <div class="hero-divider"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll-indicator">
+
+        <span>
+            Scroll to Explore
+        </span>
+
+        <div class="mouse">
+
+            <div class="wheel"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================================
+BUSINESS DIVISIONS
+===================================================-->
+
+<section class="divisions" id="divisions">
+
+    <div class="section-title">
+
+        <span>
+            OUR DIVISIONS
+        </span>
+
+        <h2>
+            Explore Our Business Divisions
+        </h2>
+
+        <p>
+            Discover the businesses driving JK Winners Investment.
+        </p>
+
+    </div>
+
+
+    <div class="division-slider">
+
+        <div class="division">
+
+            <img
+                src="images/mining.png"
+                alt="Mining"
+            >
+
+            <h3>
+                Mining
+            </h3>
+
+            <p>
+                Responsible mineral exploration and sustainable mining.
+            </p>
+
+            <a href="mining.html">
+                Explore Division →
+            </a>
+
+        </div>
+
+
+        <div class="division">
+
+            <img
+                src="images/farming.png"
+                alt="Farming"
+            >
+
+            <h3>
+                Farming
+            </h3>
+
+            <p>
+                Modern agriculture and sustainable food production.
+            </p>
+
+            <a href="farming.html">
+                Explore Division →
+            </a>
+
+        </div>
+
+
+        <div class="division">
+
+            <img
+                src="images/infrastructure.png"
+                alt="Infrastructure"
+            >
+
+            <h3>
+                Infrastructure
+            </h3>
+
+            <p>
+                Developing infrastructure that connects communities.
+            </p>
+
+            <a href="infrastructure.html">
+                Explore Division →
+            </a>
+
+        </div>
+
+
+        <div class="division">
+
+            <img
+                src="images/finance.png"
+                alt="Finance"
+            >
+
+            <h3>
+                Finance
+            </h3>
+
+            <p>
+                Strategic investment and financial solutions.
+            </p>
+
+            <a href="finance.html">
+                Explore Division →
+            </a>
+
+        </div>
+
+
+        <div class="division">
+
+            <img
+                src="images/media.png"
+                alt="Media"
+            >
+
+            <h3>
+                Media
+            </h3>
+
+            <p>
+                Creative media and digital communication.
+            </p>
+
+            <a href="media.html">
+                Explore Division →
+            </a>
+
+        </div>
+
+
+        <div class="division">
+
+            <img
+                src="images/legal.png"
+                alt="Legal"
+            >
+
+            <h3>
+                Legal
+            </h3>
+
+            <p>
+                Professional legal and compliance solutions.
+            </p>
+
+            <a href="legal.html">
+                Explore Division →
+            </a>
+
+        </div>
+
+
+        <div class="division">
+
+            <img
+                src="images/professional Services.png"
+                alt="Professional Services"
+            >
+
+            <h3>
+                Professional Services
+            </h3>
+
+            <p>
+                Expert business consulting and support.
+            </p>
+
+            <a href="services.html">
+                Explore Division →
+            </a>
+
+        </div>
+
+
+        <div class="division">
+
+            <img
+                src="images/social.png"
+                alt="Social Development"
+            >
+
+            <h3>
+                Social Development
+            </h3>
+
+            <p>
+                Creating positive and sustainable community impact.
+            </p>
+
+            <a href="social.html">
+                Explore Division →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================================
+OUR STORY
+===================================================-->
+
+<section class="jkwi-video-section">
+
+    <div class="video-heading">
+
+        <span>
+            JKWI
+        </span>
+
+        <h2>
+            OUR STORY
+        </h2>
+
+    </div>
+
+
+    <div class="jkwi-video">
+
+        <video
+            src="videos/intro.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+        ></video>
+
+    </div>
+
+</section>
+
+
+<!--==================================================
+NEWS
+===================================================-->
+
+<section class="jkwi-news" id="news">
+
+    <div class="news-heading">
+
+        <span>
+            JKWI NEWS
+        </span>
+
+        <h2>
+            MUST READ
+        </h2>
+
+    </div>
+
+
+    <div
+        class="news-container"
+        id="homeNewsContainer"
+    >
+
+        <div class="news-loading">
+            Loading latest news...
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="js/home-news.js"></script>
+
+
+<!--==================================================
+LIVE MARKET
+===================================================-->
+
+<section class="market-section">
+
+    <div class="market-title">
+
+        <span>
+            LIVE MARKET DATA
+        </span>
+
+    </div>
+
+
+    <div class="market-ticker">
+
+        <div class="ticker-track">
+
+            <div class="market-item">
+
+                Gold
+
+                <span id="gold-price">
+                    $2,350
+                </span>
+
+                <small class="up">
+                    ▲ 1.2%
+                </small>
+
+            </div>
+
+
+            <div class="market-item">
+
+                Silver
+
+                <span id="silver-price">
+                    $31.20
+                </span>
+
+                <small class="down">
+                    ▼ 0.3%
+                </small>
+
+            </div>
+
+
+            <div class="market-item">
+
+                Platinum
+
+                <span id="platinum-price">
+                    $980
+                </span>
+
+                <small class="up">
+                    ▲ 0.8%
+                </small>
+
+            </div>
+
+
+            <div class="market-item">
+
+                Bitcoin
+
+                <span id="btc-price">
+                    $118,000
+                </span>
+
+                <small class="up">
+                    ▲ 2.1%
+                </small>
+
+            </div>
+
+
+            <div class="market-item">
+
+                Gold
+
+                <span>
+                    $2,350
+                </span>
+
+                <small class="up">
+                    ▲ 1.2%
+                </small>
+
+            </div>
+
+
+            <div class="market-item">
+
+                Silver
+
+                <span>
+                    $31.20
+                </span>
+
+                <small class="down">
+                    ▼ 0.3%
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================================
+EQUIPMENT
+===================================================-->
+
+<div class="equipment-market">
+
+    <div class="equipment-item">
+
+        <img
+            src="images/equipment/excavator.jpg"
+            alt="Excavator"
+        >
+
+        <div>
+
+            <h4>
+                Excavators
+            </h4>
+
+            <span>
+                Sale & Rental
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="equipment-item">
+
+        <img
+            src="images/equipment/dump-truck.jpg"
+            alt="Dump Truck"
+        >
+
+        <div>
+
+            <h4>
+                Dump Trucks
+            </h4>
+
+            <span>
+                Sale & Rental
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="equipment-item">
+
+        <img
+            src="images/equipment/bulldozer.jpg"
+            alt="Bulldozer"
+        >
+
+        <div>
+
+            <h4>
+                Bulldozers
+            </h4>
+
+            <span>
+                Sale & Rental
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="equipment-item">
+
+        <img
+            src="images/equipment/front.jpg"
+            alt="Front-End Loader"
+        >
+
+        <div>
+
+            <h4>
+                Front-End Loaders
+            </h4>
+
+            <span>
+                Sale & Rental
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="equipment-item">
+
+        <img
+            src="images/equipment/drill.jpg"
+            alt="Drilling Rig"
+        >
+
+        <div>
+
+            <h4>
+                Drilling Rigs
+            </h4>
+
+            <span>
+                Sale & Rental
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="equipment-item">
+
+        <img
+            src="images/equipment/crusher.jpg"
+            alt="Crusher"
+        >
+
+        <div>
+
+            <h4>
+                Crushers
+            </h4>
+
+            <span>
+                Sale & Rental
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="equipment-item">
+
+        <img
+            src="images/equipment/grader.jpg"
+            alt="Grader"
+        >
+
+        <div>
+
+            <h4>
+                Graders
+            </h4>
+
+            <span>
+                Sale & Rental
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="equipment-item">
+
+        <img
+            src="images/equipment/mining-truck.jpg"
+            alt="Mining Truck"
+        >
+
+        <div>
+
+            <h4>
+                Mining Trucks
+            </h4>
+
+            <span>
+                Sale & Rental
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--==================================================
+ABOUT
+===================================================-->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="images/about.jpeg"
+                    alt="JK Winners Investment"
+                >
+
+            </div>
+
+
+            <div class="about-content">
+
+                <span class="section-subtitle">
+                    ABOUT JK WINNERS INVESTMENT
+                </span>
+
+                <h2>
+                    Assisting Businesses. Creating Sustainable Growth.
+                </h2>
+
+                <p>
+                    JK Winners Investment is a South African company committed to
+                    assisting businesses operating in strategic sectors that
+                    contribute to economic growth, innovation and sustainable
+                    development.
+                </p>
+
+                <p>
+                    Through professional expertise, strategic partnerships and
+                    long-term collaboration, we help organisations unlock new
+                    opportunities, strengthen operations and create lasting value.
+                </p>
+
+
+                <div class="about-features">
+
+                    <div class="feature">
+
+                        <h4>
+                            Our Mission
+                        </h4>
+
+                        <p>
+                            To assist businesses through professional solutions
+                            that promote sustainable growth.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <h4>
+                            Our Vision
+                        </h4>
+
+                        <p>
+                            To become one of South Africa's trusted business
+                            partners across strategic industries.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="about.html"
+                    class="about-btn"
+                >
+                    Learn More →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================================
+CONTACT
+===================================================-->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Contact JK Winners Investment
+            </h2>
+
+            <p>
+                We'd love to hear from you. Contact our team for business,
+                investment opportunities or general enquiries.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <div class="info-box">
+
+                    <div>
+
+                        <h3>
+                            Office
+                        </h3>
+
+                        <p>
+                            Pretoria, Gauteng, South Africa
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <p>
+                            +27 XX XXX XXXX
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <p>
+                            info@jkwinnersinvestment.co.za
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form">
+
+                <input
+                    type="text"
+                    placeholder="Full Name"
+                >
+
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                >
+
+                <input
+                    type="text"
+                    placeholder="Subject"
+                >
+
+                <textarea
+                    rows="6"
+                    placeholder="Your Message"
+                ></textarea>
+
+                <button class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================================
+FOOTER
+===================================================-->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-box">
+
+            <img
+                src="images/logo.png"
+                alt="JK Winners Logo"
+                class="footer-logo"
+            >
+
+            <p>
+                JK Winners Investment (Pty) Ltd is committed to sustainable
+                growth through mining, infrastructure, finance and professional
+                services across South Africa.
+            </p>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="#">
+                Divisions
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="investor.html">
+                Investors
+            </a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Pretoria, Gauteng
+            </p>
+
+            <p>
+                South Africa
+            </p>
+
+            <p>
+                info@jkwinnersinvestment.co.za
+            </p>
+
+            <p>
+                +27 XX XXX XXXX
+            </p>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>
+                Follow Us
+            </h3>
+
+            <div class="footer-social">
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    LinkedIn
+                </a>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    YouTube
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            ©️ 2026 JK Winners Investment (Pty) Ltd. All Rights Reserved.
+        </p>
+
+    </div>
+
 </footer>
 
+
+<script src="js/script.js"></script>
+
+<script src="js/ecosystem.js"></script>
+
+<script src="js/main.js"></script>
+
 </body>
+
 </html>

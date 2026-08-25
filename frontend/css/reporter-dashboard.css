@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #386cdb;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #1679fb;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 0 15px 35px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-size: 11px;
+    letter-spacing: 3px;
+    opacity: 0.6;
+}
+
+.sidebar nav {
+    margin-top: 30px;
+}
+
+.sidebar nav a,
+.sidebar-bottom a {
+    display: block;
+    color: #c7d0dc;
+    text-decoration: none;
+    padding: 14px 15px;
+    margin-bottom: 7px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #1871dd;
+    color: white;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main-content {
+    margin-left: 250px;
+    min-height: 100vh;
+    padding: 35px 45px;
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.page-label,
+.section-label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #6b7788;
+}
+
+.topbar h1 {
+    margin-top: 6px;
+    font-size: 30px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-info {
+    text-align: right;
+}
+
+.profile-info strong {
+    display: block;
+    font-size: 14px;
+}
+
+.profile-info span {
+    font-size: 12px;
+    color: #758092;
+}
+
+.profile-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #123f70;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CHANNEL
+========================= */
+
+.channel-banner {
+    background: #3896fb;
+    color: white;
+    border-radius: 12px;
+    padding: 28px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.channel-banner span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.65;
+}
+
+.channel-banner h2 {
+    margin: 8px 0;
+    font-size: 24px;
+}
+
+.channel-banner p {
+    font-size: 13px;
+    opacity: 0.75;
+}
+
+.channel-status {
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.stat-card span {
+    display: block;
+    color: #758092;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.stat-card strong {
+    font-size: 28px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+.view-all {
+    color: #0f7ce9;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.action-card {
+    background: white;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+    padding: 22px;
+    display: flex;
+    gap: 16px;
+    text-decoration: none;
+    color: #172033;
+    transition: 0.2s;
+}
+
+.action-card:hover {
+    transform: translateY(-3px);
+    border-color: #288aec;
+}
+
+.action-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background: #edf3f9;
+    color: #3790e9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.action-card h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.action-card p {
+    color: #758092;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+    background: white;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #758092;
+    border-bottom: 1px solid #e5e9ef;
+}
+
+td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eef1f5;
+    font-size: 13px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.status.draft {
+    background: #eef1f5;
+    color: #687384;
+}
+
+.status.pending {
+    background: #fff4df;
+    color: #9a6b14;
+}
+
+.status.approved {
+    background: #e7f5ec;
+    color: #277443;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        margin-left: 210px;
+        padding: 25px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .profile-info {
+        text-align: left;
+    }
+
+    .channel-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

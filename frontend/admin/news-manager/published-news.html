@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Published News | JKWI News Manager</title>
+
+    <link rel="stylesheet" href="../css/reporter-dashboard.css">
+    <link rel="stylesheet" href="../css/published-news.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>JKWI</h2>
+            <span>NEWS MANAGER</span>
+        </div>
+
+        <nav>
+            <a href="review-queue.html">
+                Review Queue
+            </a>
+
+            <a href="article-review.html">
+                Article Review
+            </a>
+
+            <a href="published-news.html" class="active">
+                Published News
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="../login.html">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <p class="page-label">NEWS MANAGEMENT</p>
+                <h1>Published News</h1>
+            </div>
+
+            <div class="profile">
+
+                <div class="profile-info">
+                    <strong>News Manager</strong>
+                    <span>Editorial Department</span>
+                </div>
+
+                <div class="profile-avatar">
+                    NM
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HEADER -->
+
+        <section class="published-banner">
+
+            <div>
+                <span>EDITORIAL ARCHIVE</span>
+
+                <h2>
+                    Published News
+                </h2>
+
+                <p>
+                    Articles that have successfully passed the
+                    News Manager approval process.
+                </p>
+            </div>
+
+            <div class="published-number">
+                248
+            </div>
+
+        </section>
+
+
+        <!-- CHANNEL FILTERS -->
+
+        <section class="channel-filters">
+
+            <button class="channel-filter active">
+                All Channels
+            </button>
+
+            <button class="channel-filter">
+                Local Business News
+            </button>
+
+            <button class="channel-filter">
+                International Business News
+            </button>
+
+            <button class="channel-filter">
+                Local Market News
+            </button>
+
+            <button class="channel-filter">
+                International Markets News
+            </button>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <input
+                type="search"
+                id="newsSearch"
+                placeholder="Search published articles..."
+            >
+
+        </section>
+
+
+        <!-- ARTICLES -->
+
+        <section class="published-container">
+
+            <div class="published-header">
+
+                <div>
+                    <span class="section-label">
+                        LIVE ARCHIVE
+                    </span>
+
+                    <h2>
+                        Published Articles
+                    </h2>
+                </div>
+
+                <span class="live-status">
+                    PUBLISHED
+                </span>
+
+            </div>
+
+
+            <!-- ARTICLE -->
+
+            <article class="published-row">
+
+                <div class="published-content">
+
+                    <span class="channel-tag business">
+                        LOCAL BUSINESS NEWS
+                    </span>
+
+                    <h3>
+                        New Infrastructure Investment Announced
+                    </h3>
+
+                    <p>
+                        Published by News Manager · 23 August 2026
+                    </p>
+
+                </div>
+
+                <span class="published-status">
+                    Published
+                </span>
+
+                <button class="view-btn">
+                    View
+                </button>
+
+            </article>
+
+
+            <article class="published-row">
+
+                <div class="published-content">
+
+                    <span class="channel-tag international">
+                        INTERNATIONAL BUSINESS NEWS
+                    </span>
+
+                    <h3>
+                        Global Mining Companies Increase Investment
+                    </h3>
+
+                    <p>
+                        Published by News Manager · 22 August 2026
+                    </p>
+
+                </div>
+
+                <span class="published-status">
+                    Published
+                </span>
+
+                <button class="view-btn">
+                    View
+                </button>
+
+            </article>
+
+
+            <article class="published-row">
+
+                <div class="published-content">
+
+                    <span class="channel-tag local-market">
+                        LOCAL MARKET NEWS
+                    </span>
+
+                    <h3>
+                        South African Mining Market Update
+                    </h3>
+
+                    <p>
+                        Published by News Manager · 21 August 2026
+                    </p>
+
+                </div>
+
+                <span class="published-status">
+                    Published
+                </span>
+
+                <button class="view-btn">
+                    View
+                </button>
+
+            </article>
+
+
+            <article class="published-row">
+
+                <div class="published-content">
+
+                    <span class="channel-tag global-market">
+                        INTERNATIONAL MARKETS NEWS
+                    </span>
+
+                    <h3>
+                        Global Commodity Markets Show Strong Movement
+                    </h3>
+
+                    <p>
+                        Published by News Manager · 20 August 2026
+                    </p>
+
+                </div>
+
+                <span class="published-status">
+                    Published
+                </span>
+
+                <button class="view-btn">
+                    View
+                </button>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="../js/published-news.js"></script>
+
+</body>
+</html>

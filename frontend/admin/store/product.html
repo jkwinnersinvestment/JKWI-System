@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | JKWI Store</title>
+
+    <link rel="stylesheet" href="../css/reporter-dashboard.css">
+    <link rel="stylesheet" href="../css/store-products.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <h2>JKWI</h2>
+        <span>ADMIN STORE</span>
+    </div>
+
+    <nav>
+        <a href="products.html" class="active">Products</a>
+        <a href="services.html">Services</a>
+        <a href="prices.html">Prices</a>
+        <a href="stock.html">Stock</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <a href="../login.html">Logout</a>
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+            <p class="page-label">ADMIN STORE</p>
+            <h1>Products</h1>
+        </div>
+
+        <div class="profile">
+
+            <div class="profile-info">
+                <strong>Store Administrator</strong>
+                <span>JKWI Store</span>
+            </div>
+
+            <div class="profile-avatar">
+                SA
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- BANNER -->
+
+    <section class="store-banner">
+
+        <div>
+            <span>PRODUCT MANAGEMENT</span>
+
+            <h2>JKWI Products</h2>
+
+            <p>
+                Manage products available through the JKWI platform.
+            </p>
+        </div>
+
+        <button id="addProductBtn">
+            + Add Product
+        </button>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="summary-grid">
+
+        <div class="summary-card">
+            <span>Total Products</span>
+            <strong>36</strong>
+        </div>
+
+        <div class="summary-card">
+            <span>Active</span>
+            <strong>31</strong>
+        </div>
+
+        <div class="summary-card">
+            <span>Out of Stock</span>
+            <strong>05</strong>
+        </div>
+
+        <div class="summary-card">
+            <span>Categories</span>
+            <strong>08</strong>
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH -->
+
+    <section class="toolbar">
+
+        <input
+            type="search"
+            id="productSearch"
+            placeholder="Search products..."
+        >
+
+        <select id="categoryFilter">
+
+            <option value="all">
+                All Categories
+            </option>
+
+            <option value="mining">
+                Mining
+            </option>
+
+            <option value="infrastructure">
+                Infrastructure
+            </option>
+
+            <option value="equipment">
+                Equipment
+            </option>
+
+        </select>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="products-container">
+
+        <div class="products-header">
+
+            <div>
+                <span class="section-label">
+                    PRODUCT CATALOGUE
+                </span>
+
+                <h2>Products</h2>
+            </div>
+
+        </div>
+
+
+        <div class="product-grid" id="productGrid">
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    PRODUCT IMAGE
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        MINING
+                    </span>
+
+                    <h3>Coal</h3>
+
+                    <p>
+                        Industrial coal supplied through JKWI.
+                    </p>
+
+                    <div class="product-footer">
+
+                        <strong>Price on Request</strong>
+
+                        <span class="in-stock">
+                            In Stock
+                        </span>
+
+                    </div>
+
+                    <button class="manage-btn">
+                        Manage
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    PRODUCT IMAGE
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        MINING
+                    </span>
+
+                    <h3>Iron Ore</h3>
+
+                    <p>
+                        Iron ore available for approved buyers.
+                    </p>
+
+                    <div class="product-footer">
+
+                        <strong>Price on Request</strong>
+
+                        <span class="in-stock">
+                            In Stock
+                        </span>
+
+                    </div>
+
+                    <button class="manage-btn">
+                        Manage
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    PRODUCT IMAGE
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        EQUIPMENT
+                    </span>
+
+                    <h3>Mining Equipment</h3>
+
+                    <p>
+                        Heavy equipment available for business use.
+                    </p>
+
+                    <div class="product-footer">
+
+                        <strong>Price on Request</strong>
+
+                        <span class="low-stock">
+                            Low Stock
+                        </span>
+
+                    </div>
+
+                    <button class="manage-btn">
+                        Manage
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    PRODUCT IMAGE
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        INFRASTRUCTURE
+                    </span>
+
+                    <h3>Construction Materials</h3>
+
+                    <p>
+                        Materials supplied for approved projects.
+                    </p>
+
+                    <div class="product-footer">
+
+                        <strong>Price on Request</strong>
+
+                        <span class="out-stock">
+                            Out of Stock
+                        </span>
+
+                    </div>
+
+                    <button class="manage-btn">
+                        Manage
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/store-products.js"></script>
+
+</body>
+</html>

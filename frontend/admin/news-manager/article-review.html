@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Article Review | JKWI News Manager</title>
+
+    <link rel="stylesheet" href="../css/reporter-dashboard.css">
+    <link rel="stylesheet" href="../css/article-review.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>JKWI</h2>
+            <span>NEWS MANAGER</span>
+        </div>
+
+        <nav>
+            <a href="review-queue.html">
+                Review Queue
+            </a>
+
+            <a href="article-review.html" class="active">
+                Article Review
+            </a>
+
+            <a href="published-news.html">
+                Published News
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="../login.html">Logout</a>
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <p class="page-label">EDITORIAL REVIEW</p>
+                <h1>Article Review</h1>
+            </div>
+
+            <div class="profile">
+
+                <div class="profile-info">
+                    <strong>News Manager</strong>
+                    <span>Editorial Department</span>
+                </div>
+
+                <div class="profile-avatar">
+                    NM
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ARTICLE HEADER -->
+
+        <section class="article-header">
+
+            <div>
+
+                <span class="channel-tag">
+                    LOCAL BUSINESS NEWS
+                </span>
+
+                <h2>
+                    New Infrastructure Investment Announced
+                </h2>
+
+                <p class="article-meta">
+                    Submitted by Reporter One · 23 August 2026 · 18:32
+                </p>
+
+            </div>
+
+            <span class="review-status">
+                PENDING REVIEW
+            </span>
+
+        </section>
+
+
+        <!-- ARTICLE -->
+
+        <section class="review-layout">
+
+            <article class="article-body">
+
+                <div class="featured-image">
+                    FEATURED IMAGE
+                </div>
+
+                <h3>
+                    New Infrastructure Investment Announced
+                </h3>
+
+                <p>
+                    South African infrastructure investment continues
+                    to attract new opportunities as companies announce
+                    projects across key economic sectors.
+                </p>
+
+                <p>
+                    The latest investment is expected to support
+                    infrastructure development while creating additional
+                    opportunities for businesses and workers.
+                </p>
+
+                <p>
+                    Industry representatives say continued investment
+                    could contribute to long-term economic growth and
+                    strengthen the country's infrastructure capabilities.
+                </p>
+
+                <div class="source-box">
+                    <strong>Source</strong>
+                    <p>Official company statement</p>
+                </div>
+
+            </article>
+
+
+            <!-- REVIEW PANEL -->
+
+            <aside class="review-panel">
+
+                <div class="panel-header">
+                    <span class="section-label">
+                        EDITORIAL DECISION
+                    </span>
+
+                    <h2>
+                        Review Article
+                    </h2>
+                </div>
+
+
+                <div class="review-info">
+
+                    <div>
+                        <span>Reporter</span>
+                        <strong>Reporter One</strong>
+                    </div>
+
+                    <div>
+                        <span>Channel</span>
+                        <strong>Local Business News</strong>
+                    </div>
+
+                    <div>
+                        <span>Submitted</span>
+                        <strong>23 Aug 2026</strong>
+                    </div>
+
+                </div>
+
+
+                <label for="managerNotes">
+                    Manager Notes
+                </label>
+
+                <textarea
+                    id="managerNotes"
+                    placeholder="Add editorial notes or requested changes..."
+                ></textarea>
+
+
+                <div class="decision-buttons">
+
+                    <button
+                        class="request-btn"
+                        id="requestChanges">
+                        Request Changes
+                    </button>
+
+                    <button
+                        class="reject-btn"
+                        id="rejectArticle">
+                        Reject
+                    </button>
+
+                    <button
+                        class="approve-btn"
+                        id="approveArticle">
+                        Approve for Publication
+                    </button>
+
+                </div>
+
+
+                <div class="approval-warning">
+
+                    <strong>
+                        Approval Required
+                    </strong>
+
+                    <p>
+                        Approving this article allows it to enter
+                        the publishing workflow.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/article-review.js"></script>
+
+</body>
+</html>

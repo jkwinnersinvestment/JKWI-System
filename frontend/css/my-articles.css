@@ -1,0 +1,167 @@
+.channel-bar {
+    background: #009EF3;
+    color: #ffffff;
+    padding: 22px 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.channel-bar span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.channel-bar h2 {
+    margin-top: 6px;
+    font-size: 21px;
+}
+
+.create-btn {
+    background: #ffffff;
+    color: #009EF3;
+    text-decoration: none;
+    padding: 11px 17px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* FILTERS */
+
+.filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter {
+    border: 1px solid #dfe4ea;
+    background: #ffffff;
+    color: #657182;
+    padding: 9px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.filter:hover,
+.filter.active {
+    background: #009EF3;
+    border-color: #009EF3;
+    color: #ffffff;
+}
+
+
+/* ARTICLES */
+
+.articles-container {
+    background: #ffffff;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.article-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 25px;
+    align-items: center;
+    padding: 22px 25px;
+    border-bottom: 1px solid #eef1f5;
+}
+
+.article-row:last-child {
+    border-bottom: none;
+}
+
+.article-info h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.article-info p {
+    color: #7a8492;
+    font-size: 12px;
+}
+
+
+/* STATUS */
+
+.status {
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.status.draft {
+    background: #eef1f5;
+    color: #687384;
+}
+
+.status.pending {
+    background: #fff3d9;
+    color: #98701c;
+}
+
+.status.approved {
+    background: #e4f5ec;
+    color: #267343;
+}
+
+.status.rejected {
+    background: #fde8e8;
+    color: #b43c3c;
+}
+
+.status.published {
+    background: #e5f4ff;
+    color: #009EF3;
+}
+
+
+/* ACTION */
+
+.article-action {
+    border: 1px solid #dfe4ea;
+    background: #ffffff;
+    color: #009EF3;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.article-action:hover {
+    background: #009EF3;
+    border-color: #009EF3;
+    color: #ffffff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .channel-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .article-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .article-action {
+        width: fit-content;
+    }
+}

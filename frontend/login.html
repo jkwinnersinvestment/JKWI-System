@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Login | JK Winners Investment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link
+        rel="stylesheet"
+        href="css/login.css"
+    >
+</head>
+<body>
+    <main class="login-page">
+        <div class="login-background"></div>
+        <section class="login-card">
+            <!-- LOGO -->
+            <a
+                href="index.html"
+                class="login-logo"
+            >
+                <img
+                    src="images/logo.png"
+                    alt="JK Winners Investment Logo"
+                >
+            </a>
+            <!-- HEADING -->
+            <div class="login-heading">
+                <span>
+                    JK WINNERS INVESTMENT
+                </span>
+                <h1>
+                    Welcome Back
+                </h1>
+                <p>
+                    Sign in to access your JKWI account.
+                </p>
+            </div>
+            <!-- LOGIN FORM -->
+            <form
+                class="login-form"
+                id="loginForm"
+            >
+                <!-- WINNERS ID -->
+                <div class="form-group">
+                    <label for="winnersId">
+                        Winners ID
+                    </label>
+                    <input
+                        type="text"
+                        id="winnersId"
+                        name="winnersId"
+                        placeholder="Enter your 10-digit Winners ID"
+                        inputmode="numeric"
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                        autocomplete="username"
+                        required
+                    >
+                    <small class="input-help">
+                        Your Winners ID must contain 10 digits.
+                    </small>
+                </div>
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label for="password">
+                        Password
+                    </label>
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                        >
+                            Show
+                        </button>
+                    </div>
+                </div>
+                <!-- OPTIONS -->
+                <div class="login-options">
+                    <label class="remember">
+                        <input
+                            type="checkbox"
+                            id="remember"
+                            name="remember"
+                        >
+                        <span>
+                            Remember me
+                        </span>
+                    </label>
+                    <a href="#">
+                        Forgot password?
+                    </a>
+                </div>
+                <!-- LOGIN BUTTON -->
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton"
+                >
+                    <span id="loginButtonText">
+                        Sign In
+                    </span>
+                    <span
+                        class="login-spinner"
+                        id="loginSpinner"
+                    ></span>
+                </button>
+                <!-- MESSAGE -->
+                <div
+                    class="login-message"
+                    id="loginMessage"
+                ></div>
+            </form>
+            <!-- FOOTER -->
+            <div class="login-footer">
+                <p>
+                    Don't have an account?
+                    <a href="register.html">
+                        Create an account
+                    </a>
+                </p>
+                <a
+                    href="index.html"
+                    class="back-home"
+                >
+                    ← Back to JKWI
+                </a>
+            </div>
+        </section>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+</html>

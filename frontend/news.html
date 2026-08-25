@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>JKWI News</title>
+
+    <link
+        rel="stylesheet"
+        href="css/news.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NEWS ARTICLE
+    ========================================== -->
+
+    <main class="news-article-page">
+
+        <a
+            href="index.html#news"
+            class="back-news"
+        >
+            ← Back to News
+        </a>
+
+
+        <!-- LOADING -->
+
+        <div
+            id="articleLoading"
+            class="article-loading"
+        >
+            Loading article...
+        </div>
+
+
+        <!-- ARTICLE -->
+
+        <article
+            id="article"
+            class="news-article"
+            hidden
+        >
+
+
+            <!-- CATEGORY -->
+
+            <div class="article-meta">
+
+                <span id="articleCategory">
+                    NEWS
+                </span>
+
+                <time id="articleDate">
+                </time>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1 id="articleTitle">
+            </h1>
+
+
+            <!-- SUMMARY -->
+
+            <p
+                id="articleSummary"
+                class="article-summary"
+            >
+            </p>
+
+
+            <!-- IMAGE -->
+
+            <div class="article-image-wrapper">
+
+                <img
+                    id="articleImage"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div
+                id="articleContent"
+                class="article-content"
+            >
+            </div>
+
+
+        </article>
+
+
+        <!-- ERROR -->
+
+        <div
+            id="articleError"
+            class="article-error"
+            hidden
+        >
+
+            <h2>
+                News article not found
+            </h2>
+
+            <p>
+                The article may have been removed or is no longer available.
+            </p>
+
+            <a
+                href="index.html#news"
+            >
+                Return to News
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/news-article.js"></script>
+
+
+</body>
+
+</html>

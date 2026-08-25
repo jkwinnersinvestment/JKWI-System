@@ -1,0 +1,159 @@
+.channel-notice {
+    background: #009EF3;
+    color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.channel-notice span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.channel-notice h2 {
+    margin-top: 7px;
+    font-size: 22px;
+}
+
+.channel-notice p {
+    margin-top: 8px;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.article-editor {
+    background: #ffffff;
+    border: 1px solid #e5e9ef;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.editor-header h2 {
+    margin-top: 5px;
+}
+
+.draft-status {
+    background: #eef1f5;
+    color: #687384;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #dfe4ea;
+    border-radius: 7px;
+    padding: 13px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #009EF3;
+    box-shadow: 0 0 0 3px rgba(0, 158, 243, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 7px;
+    color: #7b8492;
+    font-size: 11px;
+}
+
+.editor-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 10px;
+}
+
+.editor-actions button {
+    border: none;
+    padding: 13px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background: #eef1f5;
+    color: #172033;
+}
+
+.btn-primary {
+    background: #009EF3;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #008bd6;
+}
+
+.approval-notice {
+    margin-top: 20px;
+    padding: 20px;
+    border-left: 4px solid #009EF3;
+    background: #ffffff;
+    border-radius: 6px;
+}
+
+.approval-notice strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.approval-notice p {
+    color: #697586;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+
+    .article-editor {
+        padding: 20px;
+    }
+
+    .editor-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .editor-actions {
+        flex-direction: column;
+    }
+
+    .editor-actions button {
+        width: 100%;
+    }
+}

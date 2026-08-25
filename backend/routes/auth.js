@@ -199,4 +199,4 @@ status:investor.account_status
 
 
 
-module.exports = router;
+module.exports = router

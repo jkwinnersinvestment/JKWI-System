@@ -1,0 +1,319 @@
+/* =========================================
+   JKWI NEWS ARTICLE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f9;
+    color: #111;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.news-article-page {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 35px 0 80px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-news {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    color: #009fe3;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.back-news:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   ARTICLE
+========================================= */
+
+.news-article {
+    background: #fff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   ARTICLE HEADER
+========================================= */
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 35px 45px 0;
+
+    font-size: 12px;
+}
+
+.article-meta span {
+    color: #009fe3;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+}
+
+.article-meta time {
+    color: #777;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+#articleTitle {
+    margin: 15px 45px 0;
+
+    max-width: 900px;
+
+    font-size: clamp(
+        32px,
+        5vw,
+        58px
+    );
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.article-summary {
+    margin: 20px 45px 35px;
+
+    max-width: 850px;
+
+    color: #5e6670;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.article-image-wrapper {
+    width: 100%;
+
+    background: #e9edf0;
+
+    overflow: hidden;
+}
+
+.article-image-wrapper img {
+    display: block;
+
+    width: 100%;
+
+    max-height: 600px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   ARTICLE CONTENT
+========================================= */
+
+.article-content {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 45px;
+
+    font-size: 17px;
+
+    line-height: 1.85;
+
+    color: #20252a;
+}
+
+.article-content p {
+    margin: 0 0 24px;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.article-loading {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.article-error {
+    background: #fff;
+
+    padding: 70px 30px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.07);
+}
+
+.article-error h2 {
+    margin: 0 0 10px;
+
+    font-size: 30px;
+}
+
+.article-error p {
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+.article-error a {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background: #009fe3;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .news-article-page {
+        width: 94%;
+
+        padding:
+            20px 0
+            50px;
+    }
+
+
+    .back-news {
+        margin-bottom: 20px;
+
+        font-size: 13px;
+    }
+
+
+    .news-article {
+        border-radius: 12px;
+    }
+
+
+    .article-meta {
+        padding:
+            25px 22px 0;
+
+        gap: 10px;
+
+        flex-wrap: wrap;
+    }
+
+
+    #articleTitle {
+        margin:
+            12px 22px 0;
+
+        font-size: 34px;
+
+        line-height: 1.08;
+    }
+
+
+    .article-summary {
+        margin:
+            16px 22px 25px;
+
+        font-size: 15px;
+
+        line-height: 1.55;
+    }
+
+
+    .article-image-wrapper img {
+        max-height: 320px;
+    }
+
+
+    .article-content {
+        padding: 28px 22px;
+
+        font-size: 16px;
+
+        line-height: 1.75;
+    }
+
+
+    .article-content p {
+        margin-bottom: 20px;
+    }
+
+}

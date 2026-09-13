@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>JKWI AI Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="css/ai-assistant.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="ai-header">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <img
+                src="images/logo.png"
+                alt="JK Winners Investment"
+            >
+
+            <span>
+                JK Winners Investment
+            </span>
+
+        </a>
+
+
+        <a
+            href="index.html"
+            class="back-link"
+        >
+            ← Back to Website
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================================
+         AI MAIN
+    ========================================== -->
+
+    <main class="ai-page">
+
+
+        <section class="ai-container">
+
+
+            <!-- INTRO -->
+
+            <div
+                class="ai-intro"
+                id="aiIntro"
+            >
+
+                <div class="ai-symbol">
+                    AI
+                </div>
+
+                <span class="eyebrow">
+                    JKWI DIGITAL ASSISTANT
+                </span>
+
+                <h1>
+                    How can we help you?
+                </h1>
+
+                <p>
+                    Ask the JKWI AI Assistant about our company,
+                    divisions, services, markets, news and more.
+                </p>
+
+            </div>
+
+
+
+            <!-- SUGGESTIONS -->
+
+            <div
+                class="suggestions"
+                id="suggestions"
+            >
+
+                <button
+                    type="button"
+                    data-question="What services does JK Winners Investment provide?"
+                >
+                    What services do you provide?
+                </button>
+
+                <button
+                    type="button"
+                    data-question="What divisions does JKWI have?"
+                >
+                    What are your divisions?
+                </button>
+
+                <button
+                    type="button"
+                    data-question="What are the latest JKWI market prices?"
+                >
+                    Show me market prices
+                </button>
+
+                <button
+                    type="button"
+                    data-question="What is the latest JKWI news?"
+                >
+                    Latest JKWI news
+                </button>
+
+                <button
+                    type="button"
+                    data-question="I want to request a quotation."
+                >
+                    Request a quotation
+                </button>
+
+                <button
+                    type="button"
+                    data-question="I need help finding a specialist."
+                >
+                    Find a specialist
+                </button>
+
+            </div>
+
+
+
+            <!-- CHAT -->
+
+            <div
+                class="chat-box"
+                id="chatBox"
+            >
+
+                <div
+                    class="messages"
+                    id="messages"
+                >
+
+                </div>
+
+
+                <!-- TYPING -->
+
+                <div
+                    class="typing"
+                    id="typing"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <small>
+                        JKWI AI is thinking...
+                    </small>
+
+                </div>
+
+
+
+                <!-- INPUT -->
+
+                <form
+                    class="chat-form"
+                    id="chatForm"
+                >
+
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Ask JKWI AI anything..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="submit"
+                        id="sendButton"
+                    >
+                        Send
+                    </button>
+
+                </form>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/ai-assistant.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="JK Winners Investment global markets and financial market information."
+    >
+    <title>JKWI Markets | JK Winners Investment</title>
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+    <link
+        rel="stylesheet"
+        href="css/markets.css"
+    >
+</head>
+<body>
+<!--==================================================
+    NAVIGATION
+===================================================-->
+<header class="jkwi-nav" id="jkwiNav">
+    <div class="nav-container">
+        <!-- LOGO -->
+        <a
+            href="index.html"
+            class="nav-logo"
+        >
+            <img
+                src="images/logo.png"
+                alt="JK Winners Investment"
+            >
+        </a>
+        <!-- DESKTOP NAV -->
+        <nav class="nav-links">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="about.html">
+                About
+            </a>
+            <div class="nav-dropdown">
+                <a href="#">
+                    Divisions
+                    <span>+</span>
+                </a>
+                <div class="nav-dropdown-menu">
+                    <a href="mining.html">
+                        Mining
+                    </a>
+                    <a href="infrastructure.html">
+                        Infrastructure
+                    </a>
+                    <a href="finance.html">
+                        Finance
+                    </a>
+                    <a href="legal.html">
+                        Legal
+                    </a>
+                    <a href="media.html">
+                        Media
+                    </a>
+                    <a href="social.html">
+                        Social Development
+                    </a>
+                    <a href="services.html">
+                        Professional Services
+                    </a>
+                    <a href="agriculture.html">
+                        Farming
+                    </a>
+                </div>
+            </div>
+            <a
+                href="news.html"
+            >
+                News
+            </a>
+            <a
+                href="markets.html"
+                class="active"
+            >
+                Markets
+            </a>
+            <a
+                href="shopping.html"
+            >
+                Shopping
+            </a>
+            <a href="contact.html">
+                Contact
+            </a>
+        </nav>
+        <!-- MOBILE BUTTON -->
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            type="button"
+            aria-label="Open menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <!-- MOBILE MENU -->
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+        <a href="index.html">
+            Home
+        </a>
+        <a href="about.html">
+            About
+        </a>
+        <a href="news.html">
+            News
+        </a>
+        <a
+            href="markets.html"
+            class="active"
+        >
+            Markets
+        </a>
+        <a href="shopping.html">
+            Shopping
+        </a>
+        <a href="contact.html">
+            Contact
+        </a>
+    </div>
+</header>
+<!--==================================================
+    MARKET HERO
+===================================================-->
+<main>
+<section class="markets-hero">
+    <div class="markets-container">
+        <div class="markets-hero-content">
+            <span class="markets-eyebrow">
+                JKWI MARKET CENTRE
+            </span>
+            <h1>
+                Global Markets
+            </h1>
+            <p>
+                Track selected global commodities, currencies,
+                indices, agriculture markets and digital assets
+                from one central market dashboard.
+            </p>
+            <div class="markets-live-status">
+                <span class="live-dot"></span>
+                Markets monitored continuously
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================
+    MARKET OVERVIEW
+===================================================-->
+<section class="markets-overview">
+    <div class="markets-container">
+        <div class="markets-section-heading">
+            <div>
+                <span>
+                    MARKET OVERVIEW
+                </span>
+                <h2>
+                    Today's Market Pulse
+                </h2>
+            </div>
+            <div
+                class="market-updated"
+                id="marketUpdated"
+            >
+                Updated now
+            </div>
+        </div>
+        <!-- MARKET TABS -->
+        <div class="market-tabs">
+            <button
+                type="button"
+                class="market-tab active"
+                data-category="all"
+            >
+                All Markets
+            </button>
+            <button
+                type="button"
+                class="market-tab"
+                data-category="metals"
+            >
+                Metals
+            </button>
+            <button
+                type="button"
+                class="market-tab"
+                data-category="energy"
+            >
+                Energy
+            </button>
+            <button
+                type="button"
+                class="market-tab"
+                data-category="agriculture"
+            >
+                Agriculture
+            </button>
+            <button
+                type="button"
+                class="market-tab"
+                data-category="forex"
+            >
+                Forex
+            </button>
+            <button
+                type="button"
+                class="market-tab"
+                data-category="indices"
+            >
+                Indices
+            </button>
+            <button
+                type="button"
+                class="market-tab"
+                data-category="crypto"
+            >
+                Digital Assets
+            </button>
+        </div>
+        <!-- MARKET TABLE -->
+        <div class="market-table-wrapper">
+            <table class="market-table">
+                <thead>
+                    <tr>
+                        <th>
+                            Instrument
+                        </th>
+                        <th>
+                            Symbol
+                        </th>
+                        <th>
+                            Category
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Change
+                        </th>
+                        <th>
+                            Trend
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="marketTableBody">
+                    <!-- Generated by markets.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!--==================================================
+    MARKET SNAPSHOT
+===================================================-->
+<section class="market-snapshot">
+    <div class="markets-container">
+        <div class="markets-section-heading">
+            <div>
+                <span>
+                    MARKET SNAPSHOT
+                </span>
+                <h2>
+                    Key Markets
+                </h2>
+            </div>
+        </div>
+        <div class="snapshot-grid">
+            <article class="snapshot-card">
+                <div class="snapshot-top">
+                    <span>
+                        GOLD
+                    </span>
+                    <span class="snapshot-positive">
+                        +1.24%
+                    </span>
+                </div>
+                <strong>
+                    $3,450.20
+                </strong>
+                <div class="snapshot-line">
+                    <span></span>
+                </div>
+            </article>
+            <article class="snapshot-card">
+                <div class="snapshot-top">
+                    <span>
+                        BRENT
+                    </span>
+                    <span class="snapshot-negative">
+                        -0.41%
+                    </span>
+                </div>
+                <strong>
+                    $71.20
+                </strong>
+                <div class="snapshot-line">
+                    <span></span>
+                </div>
+            </article>
+            <article class="snapshot-card">
+                <div class="snapshot-top">
+                    <span>
+                        USD / ZAR
+                    </span>
+                    <span class="snapshot-negative">
+                        -0.24%
+                    </span>
+                </div>
+                <strong>
+                    16.84
+                </strong>
+                <div class="snapshot-line">
+                    <span></span>
+                </div>
+            </article>
+            <article class="snapshot-card">
+                <div class="snapshot-top">
+                    <span>
+                        JSE TOP 40
+                    </span>
+                    <span class="snapshot-positive">
+                        +0.36%
+                    </span>
+                </div>
+                <strong>
+                    91,420
+                </strong>
+                <div class="snapshot-line">
+                    <span></span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<!--==================================================
+    METALS
+===================================================-->
+<section class="market-category-section">
+    <div class="markets-container">
+        <div class="category-heading">
+            <span>
+                PRECIOUS & INDUSTRIAL METALS
+            </span>
+            <h2>
+                Metals
+            </h2>
+        </div>
+        <div class="category-grid">
+            <article class="market-category-card">
+                <span>
+                    XAU
+                </span>
+                <h3>
+                    Gold
+                </h3>
+                <strong>
+                    $3,450.20
+                </strong>
+                <small class="positive">
+                    +1.24%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    XAG
+                </span>
+                <h3>
+                    Silver
+                </h3>
+                <strong>
+                    $39.84
+                </strong>
+                <small class="positive">
+                    +0.82%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    XPT
+                </span>
+                <h3>
+                    Platinum
+                </h3>
+                <strong>
+                    $1,420.10
+                </strong>
+                <small class="positive">
+                    +0.63%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    HG
+                </span>
+                <h3>
+                    Copper
+                </h3>
+                <strong>
+                    $9,842
+                </strong>
+                <small class="positive">
+                    +1.08%
+                </small>
+            </article>
+        </div>
+    </div>
+</section>
+<!--==================================================
+    ENERGY
+===================================================-->
+<section class="market-category-section light-section">
+    <div class="markets-container">
+        <div class="category-heading">
+            <span>
+                ENERGY MARKETS
+            </span>
+            <h2>
+                Energy
+            </h2>
+        </div>
+        <div class="category-grid">
+            <article class="market-category-card">
+                <span>
+                    BRENT
+                </span>
+                <h3>
+                    Brent Crude
+                </h3>
+                <strong>
+                    $71.20
+                </strong>
+                <small class="negative">
+                    -0.41%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    WTI
+                </span>
+                <h3>
+                    WTI Crude
+                </h3>
+                <strong>
+                    $68.45
+                </strong>
+                <small class="positive">
+                    +0.28%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    NG
+                </span>
+                <h3>
+                    Natural Gas
+                </h3>
+                <strong>
+                    $3.12
+                </strong>
+                <small class="positive">
+                    +0.56%
+                </small>
+            </article>
+        </div>
+    </div>
+</section>
+<!--==================================================
+    FOREX
+===================================================-->
+<section class="market-category-section">
+    <div class="markets-container">
+        <div class="category-heading">
+            <span>
+                FOREIGN EXCHANGE
+            </span>
+            <h2>
+                Forex
+            </h2>
+        </div>
+        <div class="category-grid">
+            <article class="market-category-card">
+                <span>
+                    EURUSD
+                </span>
+                <h3>
+                    EUR / USD
+                </h3>
+                <strong>
+                    1.1684
+                </strong>
+                <small class="positive">
+                    +0.18%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    GBPUSD
+                </span>
+                <h3>
+                    GBP / USD
+                </h3>
+                <strong>
+                    1.3502
+                </strong>
+                <small class="negative">
+                    -0.11%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    USDZAR
+                </span>
+                <h3>
+                    USD / ZAR
+                </h3>
+                <strong>
+                    16.84
+                </strong>
+                <small class="negative">
+                    -0.24%
+                </small>
+            </article>
+        </div>
+    </div>
+</section>
+<!--==================================================
+    INDICES
+===================================================-->
+<section class="market-category-section light-section">
+    <div class="markets-container">
+        <div class="category-heading">
+            <span>
+                GLOBAL EQUITY INDICES
+            </span>
+            <h2>
+                Indices
+            </h2>
+        </div>
+        <div class="category-grid">
+            <article class="market-category-card">
+                <span>
+                    SPX
+                </span>
+                <h3>
+                    S&P 500
+                </h3>
+                <strong>
+                    6,532
+                </strong>
+                <small class="positive">
+                    +0.72%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    NDX
+                </span>
+                <h3>
+                    NASDAQ
+                </h3>
+                <strong>
+                    21,884
+                </strong>
+                <small class="positive">
+                    +0.91%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    JSE
+                </span>
+                <h3>
+                    JSE Top 40
+                </h3>
+                <strong>
+                    91,420
+                </strong>
+                <small class="positive">
+                    +0.36%
+                </small>
+            </article>
+        </div>
+    </div>
+</section>
+<!--==================================================
+    DIGITAL ASSETS
+===================================================-->
+<section class="market-category-section">
+    <div class="markets-container">
+        <div class="category-heading">
+            <span>
+                DIGITAL ASSET MARKETS
+            </span>
+            <h2>
+                Crypto
+            </h2>
+        </div>
+        <div class="category-grid">
+            <article class="market-category-card">
+                <span>
+                    BTC
+                </span>
+                <h3>
+                    Bitcoin
+                </h3>
+                <strong>
+                    $118,420
+                </strong>
+                <small class="positive">
+                    +2.10%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    ETH
+                </span>
+                <h3>
+                    Ethereum
+                </h3>
+                <strong>
+                    $4,280
+                </strong>
+                <small class="positive">
+                    +1.36%
+                </small>
+            </article>
+            <article class="market-category-card">
+                <span>
+                    SOL
+                </span>
+                <h3>
+                    Solana
+                </h3>
+                <strong>
+                    $214.40
+                </strong>
+                <small class="negative">
+                    -0.62%
+                </small>
+            </article>
+        </div>
+    </div>
+</section>
+<!--==================================================
+    MARKET DISCLAIMER
+===================================================-->
+<section class="market-disclaimer">
+    <div class="markets-container">
+        <div class="disclaimer-box">
+            <strong>
+                Market Information
+            </strong>
+            <p>
+                Market values displayed on this page are provided
+                for informational purposes only. Prices may be
+                delayed or indicative and should not be considered
+                investment advice.
+            </p>
+        </div>
+    </div>
+</section>
+</main>
+<!--==================================================
+    FOOTER
+===================================================-->
+<footer class="jkwi-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <img
+                src="images/logo.png"
+                alt="JK Winners Investment"
+            >
+            <p>
+                Strategic business solutions supporting
+                sectors that contribute to the growth of
+                the South African economy.
+            </p>
+        </div>
+        <div class="footer-links">
+            <h4>
+                Company
+            </h4>
+            <a href="about.html">
+                About
+            </a>
+            <a href="news.html">
+                News
+            </a>
+            <a href="markets.html">
+                Markets
+            </a>
+            <a href="contact.html">
+                Contact
+            </a>
+        </div>
+        <div class="footer-links">
+            <h4>
+                Divisions
+            </h4>
+            <a href="mining.html">
+                Mining
+            </a>
+            <a href="infrastructure.html">
+                Infrastructure
+            </a>
+            <a href="finance.html">
+                Finance
+            </a>
+            <a href="agriculture.html">
+                Farming
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>
+            © 2026 JK Winners Investment
+        </span>
+        <span>
+            All Rights Reserved
+        </span>
+    </div>
+</footer>
+<!--==================================================
+    JAVASCRIPT
+===================================================-->
+<script src="js/script.js"></script>
+<script src="js/markets.js"></script>
+</body>
+</html>

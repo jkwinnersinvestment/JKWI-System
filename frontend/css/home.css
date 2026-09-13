@@ -1,561 +1,737 @@
-/*==================================================
-SECTION 01 - NAVIGATION
-==================================================*/
-
-:root{
-    --primary:#009FE3;
-    --dark:#009FE3;
-    --light:#ffffff;
-    --grey:#6B7280;
-    --bg:#F8FBFF;
-    --shadow:0 10px 30px rgba(0,0,0,.08);
-    --radius:14px;
-    --transition:.35s ease;
+/* ==========================================
+   JKWI NAVIGATION
+   Compact • Responsive • Premium
+========================================== */
+.jkwi-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 74px;
+    z-index: 9999;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition:
+        height 0.35s ease,
+        background-color 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
+}
+/* ==========================================
+   NAV CONTAINER
+========================================== */
+.nav-container {
+    width: min(1200px, 92%);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/* ==========================================
+   JKWI BRAND
+========================================== */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.nav-logo img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    display: block;
+    transition:
+        width 0.35s ease,
+        height 0.35s ease;
+}
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    white-space: nowrap;
+}
+.nav-brand strong {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    transition: color 0.35s ease;
+}
+.nav-brand small {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 3px;
+    transition: color 0.35s ease;
+}
+/* ==========================================
+   MAIN NAVIGATION
+========================================== */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-left: auto;
+    margin-right: 28px;
+}
+.nav-menu > a,
+.nav-dropdown > a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+.nav-menu > a:hover,
+.nav-dropdown > a:hover {
+    opacity: 0.7;
+}
+/* ==========================================
+   DIVISIONS DROPDOWN
+========================================== */
+.nav-dropdown {
+    position: relative;
+}
+.nav-dropdown > a span:last-child {
+    font-size: 12px;
+    transition:
+        transform 0.3s ease;
+}
+.nav-dropdown:hover > a span:last-child {
+    transform: rotate(180deg);
+}
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    min-width: 210px;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform:
+        translate(-50%, -8px);
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+}
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform:
+        translate(-50%, 0);
+}
+.dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    color: #222222;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+.dropdown-menu a:hover {
+    background: #f2f8fb;
+    color: #009FE3;
+}
+/* ==========================================
+   DESKTOP ACCOUNT
+========================================== */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+}
+.nav-login {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+.nav-login:hover {
+    opacity: 0.7;
+}
+.nav-account {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 15px;
+    background: #009FE3;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+.nav-account:hover {
+    background: #008dcc;
+    transform: translateY(-1px);
+}
+/* ==========================================
+   SCROLLED NAVIGATION
+========================================== */
+.jkwi-nav.scrolled {
+    height: 66px;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom-color:
+        rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 5px 22px rgba(0, 0, 0, 0.07);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+.jkwi-nav.scrolled .nav-logo img {
+    width: 34px;
+    height: 34px;
+}
+.jkwi-nav.scrolled .nav-brand strong {
+    color: #161b20;
+}
+.jkwi-nav.scrolled .nav-brand small {
+    color: #68727c;
+}
+.jkwi-nav.scrolled .nav-menu > a,
+.jkwi-nav.scrolled .nav-dropdown > a {
+    color: #1b1f23;
+}
+.jkwi-nav.scrolled .nav-login {
+    color: #1b1f23;
+}
+/* ==========================================
+   MOBILE ACCOUNT ICON
+========================================== */
+.mobile-account {
+    display: none;
+    position: relative;
+    flex-shrink: 0;
+}
+.account-toggle {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.account-toggle svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition:
+        stroke 0.3s ease,
+        transform 0.25s ease;
+}
+.account-toggle:hover svg {
+    transform: scale(1.06);
+}
+.jkwi-nav.scrolled .account-toggle svg {
+    stroke: #1b1f23;
+}
+/* ==========================================
+   MOBILE ACCOUNT DROPDOWN
+========================================== */
+.account-menu {
+    position: absolute;
+    top: 46px;
+    right: 0;
+    width: 215px;
+    padding: 9px;
+    background: rgba(255, 255, 255, 0.98);
+    border:
+        1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 9px;
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform:
+        translateY(-7px);
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+}
+.mobile-account.active .account-menu {
+    opacity: 1;
+    visibility: visible;
+    transform:
+        translateY(0);
+}
+/* ==========================================
+   ACCOUNT HEADER
+========================================== */
+.account-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 7px 11px;
+    margin-bottom: 4px;
+    border-bottom:
+        1px solid #eeeeee;
+}
+.account-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eef8fd;
+}
+.account-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #009FE3;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.account-title strong {
+    display: block;
+    color: #171b1f;
+    font-size: 13px;
+    font-weight: 700;
+}
+.account-title small {
+    display: block;
+    margin-top: 2px;
+    color: #7a838b;
+    font-size: 10px;
+    font-weight: 400;
+}
+/* ==========================================
+   ACCOUNT LINKS
+========================================== */
+.account-menu > a {
+    display: block;
+    padding: 10px 9px;
+    color: #252a2f;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+.account-menu > a:hover {
+    background: #f2f8fb;
+    color: #009FE3;
+}
+/* ==========================================
+   MOBILE HAMBURGER
+========================================== */
+.nav-toggle {
+    display: none;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10002;
+}
+.nav-toggle span {
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        background-color 0.3s ease;
+}
+.jkwi-nav.scrolled .nav-toggle span {
+    background: #1b1f23;
+}
+/* ==========================================
+   HAMBURGER ACTIVE
+========================================== */
+.nav-toggle.active span:nth-child(1) {
+    transform:
+        translateY(7px)
+        rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+    transform:
+        translateY(-7px)
+        rotate(-45deg);
+}
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width: 1100px) {
+    .nav-menu {
+        gap: 16px;
+        margin-right: 18px;
+    }
+    .nav-menu > a,
+    .nav-dropdown > a {
+        font-size: 12px;
+    }
+    .nav-account {
+        padding: 0 12px;
+    }
+}
+/* ==========================================
+   MOBILE — 50/50 SIDE DRAWER
+========================================== */
+@media (max-width: 850px) {
+    .jkwi-nav {
+        height: 68px;
+    }
+    .nav-container {
+        width: 90%;
+    }
+    /* Hide desktop account buttons */
+    .nav-actions {
+        display: none;
+    }
+    /* ======================================
+       MOBILE PROFILE
+    ====================================== */
+    .mobile-account {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 2px;
+        position: relative;
+        z-index: 10003;
+    }
+    /* ======================================
+       HAMBURGER
+    ====================================== */
+    .nav-toggle {
+        display: flex;
+        z-index: 10003;
+    }
+    /* ======================================
+       DARK BACKDROP
+    ====================================== */
+    .jkwi-nav::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+            rgba(0, 0, 0, 0.42);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 9998;
+        transition:
+            opacity 0.4s ease,
+            visibility 0.4s ease;
+    }
+    .jkwi-nav:has(.nav-menu.active)::after {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    /* ======================================
+       50/50 SIDE MENU
+    ====================================== */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        margin: 0;
+        padding:
+            95px
+            28px
+            30px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #ffffff;
+        box-shadow:
+            -12px 0 35px
+            rgba(0, 0, 0, 0.16);
+        overflow-y: auto;
+        z-index: 10000;
+        transform:
+            translateX(100%);
+        visibility: hidden;
+        transition:
+            transform 0.4s
+            cubic-bezier(
+                0.77,
+                0,
+                0.175,
+                1
+            ),
+            visibility 0.4s ease;
+    }
+    /* OPEN */
+    .nav-menu.active {
+        display: flex;
+        transform:
+            translateX(0);
+        visibility: visible;
+    }
+    /* ======================================
+       SIDE MENU TITLE
+    ====================================== */
+    .nav-menu::before {
+        content: "JKWI MENU";
+        position: absolute;
+        top: 30px;
+        left: 28px;
+        color: #1b1f23;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+    }
+    /* ======================================
+       SIDE MENU LINKS
+    ====================================== */
+    .nav-menu > a,
+    .nav-menu .nav-dropdown > a {
+        width: 100%;
+        padding: 15px 0;
+        color: #1b1f23;
+        font-size: 14px;
+        font-weight: 500;
+        border-bottom:
+            1px solid
+            rgba(0, 0, 0, 0.06);
+        transition:
+            color 0.2s ease,
+            padding-left 0.2s ease;
+    }
+    .nav-menu > a:hover,
+    .nav-menu .nav-dropdown > a:hover {
+        color: #009FE3;
+        padding-left: 5px;
+        opacity: 1;
+    }
+    /* ======================================
+       DIVISIONS
+    ====================================== */
+    .nav-menu .nav-dropdown {
+        width: 100%;
+    }
+    .nav-menu .nav-dropdown > a {
+        justify-content: space-between;
+    }
+    /* ======================================
+       MOBILE DIVISIONS DROPDOWN
+    ====================================== */
+    .nav-menu .dropdown-menu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        display: none;
+        padding: 4px 0 8px;
+        background: #f7fafc;
+        border: 0;
+        border-radius: 6px;
+        box-shadow: none;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-menu .nav-dropdown:hover .dropdown-menu {
+        display: none;
+    }
+    .nav-menu .nav-dropdown.active .dropdown-menu {
+        display: block;
+    }
+    .nav-menu .dropdown-menu a {
+        padding:
+            9px
+            12px;
+        color: #68727c;
+        font-size: 12px;
+    }
+    .nav-menu .dropdown-menu a:hover {
+        background: #eef8fd;
+        color: #009FE3;
+    }
+    /* ======================================
+       MOBILE BRAND
+    ====================================== */
+    .nav-logo {
+        gap: 8px;
+    }
+    .nav-logo img {
+        width: 34px;
+        height: 34px;
+    }
+    .nav-brand strong {
+        font-size: 13px;
+    }
+    .nav-brand small {
+        font-size: 9px;
+    }
+    /* ======================================
+       MOBILE SCROLLED
+    ====================================== */
+    .jkwi-nav.scrolled {
+        height: 62px;
+    }
+    .jkwi-nav.scrolled .nav-logo img {
+        width: 32px;
+        height: 32px;
+    }
+}
+/* ==========================================
+   SMALL PHONES
+========================================== */
+@media (max-width: 480px) {
+    .nav-container {
+        width: 92%;
+    }
+    .nav-logo {
+        gap: 7px;
+    }
+    .nav-logo img {
+        width: 32px;
+        height: 32px;
+    }
+    .nav-brand strong {
+        font-size: 12px;
+    }
+    .nav-brand small {
+        font-size: 8px;
+    }
+    .account-toggle,
+    .nav-toggle {
+        width: 34px;
+        height: 34px;
+    }
+    .account-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
+    .nav-toggle span {
+        width: 19px;
+    }
+    .account-menu {
+        width: 205px;
+        top: 44px;
+    }
+    /* ======================================
+       50/50 DRAWER — SMALL PHONE
+    ====================================== */
+    .nav-menu {
+        width: 50%;
+        padding:
+            90px
+            20px
+            25px;
+    }
+    .nav-menu::before {
+        left: 20px;
+    }
+    .nav-menu > a,
+    .nav-menu .nav-dropdown > a {
+        font-size: 13px;
+        padding: 13px 0;
+    }
+    .nav-menu .dropdown-menu a {
+        font-size: 11px;
+        padding:
+            8px
+            9px;
+    }
+}
+/* ==========================================
+   VERY SMALL PHONES
+========================================== */
+@media (max-width: 360px) {
+    .nav-menu {
+        width: 50%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .nav-menu::before {
+        left: 16px;
+    }
+    .nav-brand strong {
+        font-size: 11px;
+    }
+    .nav-brand small {
+        font-size: 8px;
+    }
+    .nav-logo img {
+        width: 30px;
+        height: 30px;
+    }
+    .account-toggle,
+    .nav-toggle {
+        width: 32px;
+        height: 32px;
+    }
+}
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+@media (prefers-reduced-motion: reduce) {
+    .jkwi-nav,
+    .nav-logo img,
+    .nav-brand strong,
+    .nav-brand small,
+    .nav-menu,
+    .dropdown-menu,
+    .account-menu,
+    .account-toggle svg,
+    .nav-toggle span {
+        transition: none !important;
+    }
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:var(--bg);
-    color:var(--dark);
-}
-
-/*=========================
-HEADER
-=========================*/
-
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    transition:var(--transition);
-}
-
-.header.scrolled{
-    background:#fff;
-    box-shadow:var(--shadow);
-}
-
-/*=========================
-NAVBAR
-=========================*/
-
-.navbar{
-
-    max-width:1450px;
-
-    height:90px;
-
-    margin:auto;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:0 50px;
-
-}
-
-/*=========================
-LOGO
-=========================*/
-
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    text-decoration:none;
-
-}
-
-.logo img{
-
-    width:58px;
-
-    margin-right:15px;
-
-    transition:.35s;
-
-}
-
-.logo-text{
-
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-.logo-text h2{
-
-    font-size:24px;
-
-    font-weight:700;
-
-    color:white;
-
-    transition:.35s;
-
-}
-
-.logo-text span{
-
-    font-size:13px;
-
-    color:rgba(255,255,255,.85);
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-
-}
-
-.header.scrolled .logo-text h2{
-
-    color:var(--dark);
-
-}
-
-.header.scrolled .logo-text span{
-
-    color:var(--grey);
-
-}
-
-/*=========================
-NAVIGATION
-=========================*/
-
-.nav-links{
-
-    display:flex;
-
-    align-items:center;
-
-    list-style:none;
-
-    gap:35px;
-
-}
-
-.nav-links li{
-
-    position:relative;
-
-}
-
-.nav-links li a{
-
-    text-decoration:none;
-
-    color:white;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    transition:.35s;
-
-    position:relative;
-
-}
-
-.header.scrolled .nav-links li a{
-
-    color:var(--dark);
-
-}
-
-/* underline */
-
-.nav-links li a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:3px;
-
-    background:var(--primary);
-
-    transition:.35s;
-
-    transform:translateX(-50%);
-
-    border-radius:50px;
-
-}
-
-.nav-links li:hover>a{
-
-    color:var(--primary);
-
-}
-
-.nav-links li:hover>a::after{
-
-    width:100%;
-
-}
-
-.active{
-
-    color:var(--primary)!important;
-
-}
-
-.active::after{
-
-    width:100%!important;
-
-}
-
-/*=========================
-RIGHT
-=========================*/
-
-.nav-right{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:20px;
-
-}
-
-.contact-btn{
-
-    background:var(--primary);
-
-    color:white;
-
-    border:none;
-
-    padding:14px 30px;
-
-    border-radius:50px;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.35s;
-
-}
-
-.contact-btn:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:0 15px 30px rgba(0,159,227,.25);
-
-}
-
-/*=========================
-MENU ICON
-=========================*/
-
-.menu-toggle{
-
-    display:none;
-
-    flex-direction:column;
-
-    cursor:pointer;
-
-}
-
-.menu-toggle span{
-
-    width:28px;
-
-    height:3px;
-
-    background:white;
-
-    margin:4px 0;
-
-    border-radius:20px;
-
-    transition:.35s;
-
-}
-
-.header.scrolled .menu-toggle span{
-
-    background:var(--dark);
-
-}
-/*==================================================
-SECTION 01 - DROPDOWN MENU
-==================================================*/
-
-.dropdown-menu{
-
-    position:absolute;
-
-    top:120%;
-
-    left:0;
-
-    min-width:260px;
-
-    background:#fff;
-
-    border-radius:16px;
-
-    padding:12px 0;
-
-    list-style:none;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.10);
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transform:translateY(15px);
-
-    transition:.35s ease;
-
-    z-index:999;
-
-}
-
-.dropdown:hover .dropdown-menu{
-
-    opacity:1;
-
-    visibility:visible;
-
-    transform:translateY(0);
-
-}
-
-.dropdown-menu li{
-
-    width:100%;
-
-}
-
-.dropdown-menu li a{
-
-    display:block;
-
-    padding:14px 24px;
-
-    color:#1E293B !important;
-
-    font-size:15px;
-
-    font-weight:500;
-
-    transition:.3s;
-
-}
-
-.dropdown-menu li a::after{
-
-    display:none;
-
-}
-
-.dropdown-menu li a:hover{
-
-    background:#F4FAFF;
-
-    color:#009FE3 !important;
-
-    padding-left:32px;
-
-}
-
-/*==================================================
-SCROLL EFFECT
-==================================================*/
-
-.header.scrolled{
-
-    height:80px;
-
-    backdrop-filter:blur(15px);
-
-}
-
-.header.scrolled .logo img{
-
-    width:50px;
-
-}
-
-/*==================================================
-MOBILE
-==================================================*/
-
-@media(max-width:1100px){
-
-.nav-links{
-
-display:none;
-
-}
-
-.contact-btn{
-
-display:none;
-
-}
-
-.menu-toggle{
-
-display:flex;
-
-}
-
-.navbar{
-
-padding:0 25px;
-
-}
-
-.logo-text h2{
-
-font-size:20px;
-
-}
-
-.logo img{
-
-width:52px;
-
-}
-
-}
-
-/*==================================================
-TABLET
-==================================================*/
-
-@media(max-width:768px){
-
-.navbar{
-
-height:80px;
-
-}
-
-.logo img{
-
-width:48px;
-
-}
-
-.logo-text h2{
-
-font-size:18px;
-
-}
-
-.logo-text span{
-
-font-size:11px;
-
-}
-
-}
-
-/*==================================================
-PHONE
-==================================================*/
-
-@media(max-width:500px){
-
-.navbar{
-
-padding:0 18px;
-
-}
-
-.logo img{
-
-width:42px;
-
-margin-right:10px;
-
-}
-
-.logo-text h2{
-
-font-size:16px;
-
-}
-
-.logo-text span{
-
-display:none;
-
-}
-
-.menu-toggle span{
-
-width:24px;
-
-}
-
-}
-
-/*==================================================
-NAV ANIMATION
-==================================================*/
-
-.header{
-
-animation:navSlide .8s ease;
-
-}
-
-@keyframes navSlide{
-
-from{
-
-transform:translateY(-100%);
-
-opacity:0;
-
-}
-
-to{
-
-transform:translateY(0);
-
-opacity:1;
-
-}
-}
 /*==================================================
 SECTION 02 - HERO
 ==================================================*/
@@ -1344,105 +1520,890 @@ Responsive
 }
 
 }
-/*=========================
-MARKET TICKER
-=========================*/
+/*==================================================
+   JKWI MARKET PULSE
+   Compact • Interactive • Premium
+==================================================*/
 
-.market-section{
+.jkwi-market-pulse {
 
-    background:#ffffff;
+    position: relative;
 
-    padding:25px 0;
+    width: 100%;
 
-    border-top:1px solid #eee;
+    padding: 24px 0 20px;
 
-    border-bottom:1px solid #eee;
+    background:
+        linear-gradient(
+            180deg,
+            #f8fbfd 0%,
+            #ffffff 100%
+        );
 
-    overflow:hidden;
+    border-top: 1px solid #e7edf1;
 
-}
+    border-bottom: 1px solid #e7edf1;
 
-.market-title{
-
-    text-align:center;
-
-    margin-bottom:15px;
-
-}
-
-.market-title span{
-
-    color:#009FE3;
-
-    font-weight:700;
-
-    letter-spacing:2px;
+    overflow: hidden;
 
 }
 
-.market-ticker{
 
-    overflow:hidden;
+/* ==========================================
+   CONTAINER
+========================================== */
 
-}
+.market-pulse-container {
 
-.ticker-track{
+    width: min(1200px, 92%);
 
-    display:flex;
-
-    gap:50px;
-
-    width:max-content;
-
-    animation:scrollTicker 35s linear infinite;
+    margin: 0 auto;
 
 }
 
-.market-item{
 
-    display:flex;
+/* ==========================================
+   TOP
+========================================== */
 
-    align-items:center;
+.market-pulse-top {
 
-    gap:10px;
+    display: flex;
 
-    font-size:17px;
+    align-items: center;
 
-    white-space:nowrap;
+    justify-content: space-between;
 
-    color:#111;
-
-}
-
-.market-item span{
-
-    font-weight:700;
+    margin-bottom: 13px;
 
 }
 
-.up{
 
-    color:#00B050;
+.market-pulse-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
 
 }
 
-.down{
 
-    color:#e53935;
+.market-pulse-title strong {
+
+    color: #111827;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: .7px;
 
 }
 
-@keyframes scrollTicker{
 
-    from{
+.market-pulse-live {
 
-        transform:translateX(0);
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 4px 7px;
+
+    border-radius: 4px;
+
+    background: #eef8fd;
+
+    color: #009FE3;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.market-pulse-live i {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #009FE3;
+
+    animation: pulseLive 1.5s ease-in-out infinite;
+
+}
+
+
+@keyframes pulseLive {
+
+    0%,
+    100% {
+
+        opacity: .35;
+
+        transform: scale(.8);
 
     }
 
-    to{
+    50% {
 
-        transform:translateX(-50%);
+        opacity: 1;
+
+        transform: scale(1.2);
+
+    }
+
+}
+
+
+.market-pulse-link {
+
+    color: #009FE3;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: .2s ease;
+
+}
+
+
+.market-pulse-link:hover {
+
+    transform: translateX(3px);
+
+}
+
+
+/* ==========================================
+   CATEGORY BAR
+========================================== */
+
+.market-pulse-categories {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 12px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.market-pulse-categories::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+.pulse-category {
+
+    flex-shrink: 0;
+
+    min-height: 27px;
+
+    padding: 0 10px;
+
+    border: 1px solid #dfe6eb;
+
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    color: #69737d;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        transform .2s ease;
+
+}
+
+
+.pulse-category:hover {
+
+    border-color: #009FE3;
+
+    color: #009FE3;
+
+}
+
+
+.pulse-category:active {
+
+    transform: scale(.95);
+
+}
+
+
+.pulse-category.active {
+
+    border-color: #009FE3;
+
+    background: #009FE3;
+
+    color: #ffffff;
+
+}
+
+
+/* ==========================================
+   MARKET STAGE
+========================================== */
+
+.market-pulse-stage {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 76px;
+
+    overflow: hidden;
+
+    border: 1px solid #e2e8ed;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, .035);
+
+}
+
+
+/* ==========================================
+   TRACK
+========================================== */
+
+.market-pulse-track {
+
+    height: 100%;
+
+    width: max-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 25px;
+
+    will-change: transform;
+
+    animation:
+        marketPulseMove 32s linear infinite;
+
+}
+
+
+.market-pulse-stage:hover
+.market-pulse-track {
+
+    animation-play-state: paused;
+
+}
+
+
+@keyframes marketPulseMove {
+
+    from {
+
+        transform: translateX(0);
+
+    }
+
+    to {
+
+        transform: translateX(-50%);
+
+    }
+
+}
+
+
+/* ==========================================
+   MARKET CARD
+========================================== */
+
+.market-pulse-card {
+
+    position: relative;
+
+    width: 180px;
+
+    height: 56px;
+
+    flex: 0 0 180px;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 10px;
+
+    border: 1px solid #e5eaee;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.market-pulse-card:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #009FE3;
+
+    box-shadow:
+        0 8px 22px rgba(0, 159, 227, .10);
+
+}
+
+
+/* ==========================================
+   CARD LEFT
+========================================== */
+
+.market-card-name {
+
+    min-width: 0;
+
+}
+
+
+.market-card-name small {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #89939d;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: .7px;
+
+    text-transform: uppercase;
+
+}
+
+
+.market-card-name strong {
+
+    display: block;
+
+    overflow: hidden;
+
+    color: #161b20;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+/* ==========================================
+   PRICE
+========================================== */
+
+.market-card-value {
+
+    text-align: right;
+
+}
+
+
+.market-card-price {
+
+    display: block;
+
+    color: #161b20;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.market-card-change {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+}
+
+
+.market-card-change.up {
+
+    color: #168a58;
+
+}
+
+
+.market-card-change.down {
+
+    color: #d94a4a;
+
+}
+
+
+/* ==========================================
+   MINI PULSE
+========================================== */
+
+.market-card-pulse {
+
+    position: absolute;
+
+    left: 10px;
+
+    bottom: 7px;
+
+    width: 38px;
+
+    height: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.market-card-pulse::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -40px;
+
+    top: 4px;
+
+    width: 80px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #009FE3,
+            transparent
+        );
+
+    animation:
+        miniPulse 1.8s linear infinite;
+
+}
+
+
+@keyframes miniPulse {
+
+    from {
+
+        transform: translateX(0);
+
+    }
+
+    to {
+
+        transform: translateX(40px);
+
+    }
+
+}
+
+
+/* ==========================================
+   CARD CATEGORY LINE
+========================================== */
+
+.market-card-line {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 2px;
+
+    height: 100%;
+
+    background: #009FE3;
+
+    border-radius: 6px 0 0 6px;
+
+}
+
+
+/* ==========================================
+   EDGE FADE
+========================================== */
+
+.market-pulse-fade {
+
+    position: absolute;
+
+    top: 0;
+
+    width: 75px;
+
+    height: 100%;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+}
+
+
+.market-pulse-fade.left {
+
+    left: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            rgba(255,255,255,0)
+        );
+
+}
+
+
+.market-pulse-fade.right {
+
+    right: 0;
+
+    background:
+        linear-gradient(
+            270deg,
+            #ffffff,
+            rgba(255,255,255,0)
+        );
+
+}
+
+
+/* ==========================================
+   BOTTOM
+========================================== */
+
+.market-pulse-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 9px;
+
+    color: #929ba4;
+
+    font-size: 7px;
+
+}
+
+
+.market-pulse-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+.pulse-status-dot {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #168a58;
+
+    box-shadow:
+        0 0 0 3px rgba(22,138,88,.08);
+
+    animation:
+        statusPulse 1.8s ease-in-out infinite;
+
+}
+
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+
+        opacity: .5;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .jkwi-market-pulse {
+
+        padding: 20px 0 17px;
+
+    }
+
+
+    .market-pulse-container {
+
+        width: 94%;
+
+    }
+
+
+    .market-pulse-stage {
+
+        height: 72px;
+
+    }
+
+
+    .market-pulse-track {
+
+        gap: 7px;
+
+        padding: 0 18px;
+
+        animation-duration: 25s;
+
+    }
+
+
+    .market-pulse-card {
+
+        width: 165px;
+
+        height: 53px;
+
+        flex-basis: 165px;
+
+    }
+
+
+    .market-pulse-fade {
+
+        width: 45px;
+
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 500px) {
+
+    .market-pulse-top {
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .market-pulse-title {
+
+        gap: 7px;
+
+    }
+
+
+    .market-pulse-title strong {
+
+        font-size: 11px;
+
+    }
+
+
+    .market-pulse-live {
+
+        font-size: 6px;
+
+        padding: 4px 6px;
+
+    }
+
+
+    .market-pulse-link {
+
+        font-size: 8px;
+
+    }
+
+
+    .market-pulse-categories {
+
+        margin-bottom: 9px;
+
+    }
+
+
+    .pulse-category {
+
+        min-height: 25px;
+
+        padding: 0 9px;
+
+        font-size: 7px;
+
+    }
+
+
+    .market-pulse-stage {
+
+        height: 68px;
+
+        border-radius: 6px;
+
+    }
+
+
+    .market-pulse-track {
+
+        animation-duration: 22s;
+
+    }
+
+
+    .market-pulse-card {
+
+        width: 155px;
+
+        height: 50px;
+
+        flex-basis: 155px;
+
+        padding: 7px 9px;
+
+    }
+
+
+    .market-card-name small {
+
+        font-size: 6px;
+
+    }
+
+
+    .market-card-name strong {
+
+        font-size: 10px;
+
+    }
+
+
+    .market-card-price {
+
+        font-size: 10px;
+
+    }
+
+
+    .market-pulse-bottom {
+
+        font-size: 6.5px;
+
+    }
+
+
+    .market-pulse-bottom > span:first-child {
+
+        display: none;
+
+    }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .market-pulse-track,
+    .market-pulse-live i,
+    .market-card-pulse::before,
+    .pulse-status-dot {
+
+        animation: none !important;
 
     }
 
@@ -2428,6 +3389,602 @@ LIVE MARKET - MOBILE
 
         font-size: 13px;
         border-radius: 7px;
+    }
+
+}/* ==========================
+   JKWI AI SECTION
+========================== */
+
+.jkwi-ai-section {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    padding: 100px 8%;
+
+    background: #f5f8fb;
+}
+
+
+.jkwi-ai-content {
+    max-width: 600px;
+}
+
+
+.jkwi-ai-content .eyebrow {
+    display: block;
+
+    color: #009fe3;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.jkwi-ai-content h2 {
+    font-size: 42px;
+
+    margin-bottom: 18px;
+}
+
+
+.jkwi-ai-content p {
+    color: #667085;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+.ai-button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    background: #009fe3;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+}
+
+
+/* AI CARD */
+
+.jkwi-ai-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.07);
+}
+
+
+.ai-card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 22px;
+
+    border-bottom:
+        1px solid #e5e7eb;
+}
+
+
+.ai-mini-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #009fe3;
+
+    color: white;
+
+    font-weight: 800;
+}
+
+
+.ai-card-header strong {
+    display: block;
+}
+
+
+.ai-card-header small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #6b7280;
+}
+
+
+.ai-preview {
+    padding: 25px;
+}
+
+
+.preview-message {
+    max-width: 80%;
+
+    padding: 12px 15px;
+
+    margin-bottom: 14px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.preview-message.ai {
+    background: #f1f5f9;
+}
+
+
+.preview-message.user {
+    margin-left: auto;
+
+    background: #009fe3;
+
+    color: white;
+}
+
+
+@media (max-width: 750px) {
+
+    .jkwi-ai-section {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 70px 20px;
+    }
+
+
+    .jkwi-ai-content h2 {
+        font-size: 32px;
+    }
+
+}/*==================================================
+   JKWI SHOPPING & RENTING
+   Compact • Premium • Responsive
+==================================================*/
+
+.shopping-preview {
+    width: 100%;
+    padding: 55px 0;
+    background: #ffffff;
+    border-top: 1px solid #eef1f4;
+    border-bottom: 1px solid #eef1f4;
+}
+
+.shopping-preview-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.shopping-preview-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.shopping-preview-heading > div {
+    max-width: 720px;
+}
+
+.shopping-preview-heading span {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #009FE3;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.shopping-preview-heading h2 {
+    margin: 0 0 8px;
+
+    color: #111827;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.shopping-preview-heading p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   SEE MORE
+========================================== */
+
+.shopping-see-more {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+    padding: 0 17px;
+
+    background: #009FE3;
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+.shopping-see-more:hover {
+    background: #008dcc;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   FEATURED CARDS
+========================================== */
+
+.shopping-featured {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+
+.shopping-card {
+    display: flex;
+
+    min-width: 0;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.shopping-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #009FE3;
+
+    box-shadow:
+        0 12px 28px rgba(0, 159, 227, .10);
+}
+
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.shopping-card-image {
+    position: relative;
+
+    width: 125px;
+    min-width: 125px;
+
+    height: 105px;
+
+    overflow: hidden;
+}
+
+.shopping-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .4s ease;
+}
+
+.shopping-card:hover
+.shopping-card-image img {
+    transform: scale(1.05);
+}
+
+
+/* BADGE */
+
+.shopping-badge {
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+
+    padding: 4px 6px;
+
+    background: #009FE3;
+    color: #ffffff;
+
+    border-radius: 4px;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.shopping-card-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 12px 14px;
+}
+
+.shopping-card-content > span {
+    color: #009FE3;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .8px;
+
+    margin-bottom: 4px;
+}
+
+.shopping-card-content h3 {
+    margin: 0 0 5px;
+
+    color: #111827;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.shopping-card-content p {
+    margin: 0;
+
+    color: #7b8490;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   BOTTOM
+========================================== */
+
+.shopping-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 18px;
+
+    padding-top: 13px;
+
+    border-top:
+        1px solid #eef1f4;
+}
+
+.shopping-bottom span {
+    color: #8a939d;
+
+    font-size: 10px;
+}
+
+.shopping-bottom a {
+    color: #009FE3;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.shopping-bottom a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .shopping-preview {
+        padding: 45px 0;
+    }
+
+    .shopping-featured {
+        gap: 10px;
+    }
+
+    .shopping-card-image {
+        width: 105px;
+        min-width: 105px;
+        height: 95px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+    .shopping-preview {
+        padding: 38px 0;
+    }
+
+    .shopping-preview-container {
+        width: 92%;
+    }
+
+    .shopping-preview-heading {
+        display: block;
+
+        margin-bottom: 18px;
+    }
+
+    .shopping-preview-heading h2 {
+        font-size: 25px;
+    }
+
+    .shopping-preview-heading p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .shopping-see-more {
+        margin-top: 13px;
+
+        min-height: 36px;
+        padding: 0 14px;
+    }
+
+    .shopping-featured {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .shopping-card {
+        width: 100%;
+    }
+
+    .shopping-card-image {
+        width: 100px;
+        min-width: 100px;
+        height: 88px;
+    }
+
+    .shopping-card-content {
+        padding: 10px 12px;
+    }
+
+    .shopping-card-content h3 {
+        font-size: 15px;
+    }
+
+    .shopping-bottom {
+        margin-top: 14px;
+    }
+
+    .shopping-bottom span {
+        display: none;
+    }
+
+    .shopping-bottom a {
+        margin-left: auto;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 380px) {
+
+    .shopping-preview {
+        padding: 32px 0;
+    }
+
+    .shopping-preview-heading h2 {
+        font-size: 23px;
+    }
+
+    .shopping-card-image {
+        width: 90px;
+        min-width: 90px;
+        height: 82px;
     }
 
 }

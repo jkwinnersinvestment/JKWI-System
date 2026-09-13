@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="JKWI News — Local and international business, markets, industry and economic news."
+    >
+
+    <meta
+        name="theme-color"
+        content="#009FE3"
+    >
+
+    <title>JKWI News | JK Winners Investment</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- News CSS -->
+    <link rel="stylesheet" href="css/news-home.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TOP BAR
+         ===================================================== -->
+
+    <div class="news-topbar">
+
+        <div class="news-topbar-inner">
+
+            <div class="news-topbar-left">
+                <span class="news-live-dot"></span>
+                <span>JKWI NEWS</span>
+                <span>•</span>
+                <span>Business &amp; Markets</span>
+            </div>
+
+            <div class="news-topbar-right" id="newsDate">
+                Latest Business News
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="news-header">
+
+        <div class="news-header-inner">
+
+            <!-- Brand -->
+
+            <a href="index.html" class="news-brand">
+
+                <div class="news-brand-mark">
+                    JK
+                </div>
+
+                <div class="news-brand-text">
+
+                    <div class="news-brand-title">
+                        JK Winners
+                    </div>
+
+                    <div class="news-brand-subtitle">
+                        INVESTMENT • NEWS
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+
+            <nav class="news-nav" aria-label="News navigation">
+
+                <a
+                    href="news-home.html"
+                    class="active"
+                >
+                    News Home
+                </a>
+
+                <a
+                    href="#local-business"
+                    data-channel="Local Business News"
+                >
+                    Local Business
+                </a>
+
+                <a
+                    href="#international-business"
+                    data-channel="International Business News"
+                >
+                    International Business
+                </a>
+
+                <a
+                    href="#local-markets"
+                    data-channel="Local Market News"
+                >
+                    Local Markets
+                </a>
+
+                <a
+                    href="#international-markets"
+                    data-channel="International Markets News"
+                >
+                    International Markets
+                </a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+
+            <div class="news-header-actions">
+
+                <button
+                    type="button"
+                    class="news-search-button"
+                    id="openSearch"
+                    aria-label="Open search"
+                    title="Search news"
+                >
+                    🔍
+                </button>
+
+                <button
+                    type="button"
+                    class="news-menu-button"
+                    id="openMenu"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    title="Menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div
+            class="news-mobile-menu"
+            id="mobileMenu"
+        >
+
+            <a href="news-home.html">
+                News Home
+            </a>
+
+            <a
+                href="#local-business"
+                data-channel="Local Business News"
+            >
+                Local Business News
+            </a>
+
+            <a
+                href="#international-business"
+                data-channel="International Business News"
+            >
+                International Business News
+            </a>
+
+            <a
+                href="#local-markets"
+                data-channel="Local Market News"
+            >
+                Local Market News
+            </a>
+
+            <a
+                href="#international-markets"
+                data-channel="International Markets News"
+            >
+                International Markets News
+            </a>
+
+            <a href="index.html">
+                JKWI Main Website
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         SEARCH PANEL
+         ===================================================== -->
+
+    <div
+        class="news-search-panel"
+        id="searchPanel"
+    >
+
+        <div class="news-search-inner">
+
+            <input
+                type="search"
+                id="newsSearch"
+                placeholder="Search business, markets, mining, finance..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                class="news-search-submit"
+                id="searchButton"
+            >
+                Search
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="news-main">
+
+        <!-- Page Heading -->
+
+        <section class="news-heading">
+
+            <div>
+
+                <div class="news-heading-label">
+                    JK Winners Investment
+                </div>
+
+                <h1>
+                    News
+                </h1>
+
+            </div>
+
+            <p>
+                Business, markets, investment, industry and economic
+                developments from South Africa and around the world.
+            </p>
+
+        </section>
+
+
+        <!-- Error -->
+
+        <div
+            class="news-error"
+            id="newsError"
+            role="alert"
+        >
+            Unable to load the latest news. Please try again.
+        </div>
+
+
+        <!-- =================================================
+             BREAKING NEWS
+             ================================================= -->
+
+        <section class="news-breaking">
+
+            <div class="news-breaking-label">
+                BREAKING
+            </div>
+
+            <div
+                class="news-breaking-content"
+                id="breakingNews"
+            >
+                Loading latest news...
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FEATURED NEWS
+             ================================================= -->
+
+        <section
+            class="news-featured-grid"
+            id="featuredSection"
+        >
+
+            <!-- Main Featured Story -->
+
+            <article
+                class="news-featured"
+                id="featuredArticle"
+            >
+
+                <div class="news-featured-image">
+
+                    <img
+                        id="featuredImage"
+                        src=""
+                        alt=""
+                        loading="eager"
+                    >
+
+                </div>
+
+
+                <div class="news-featured-content">
+
+                    <span
+                        class="news-category"
+                        id="featuredCategory"
+                    >
+                        Featured
+                    </span>
+
+                    <h2 id="featuredTitle">
+                        Loading featured story...
+                    </h2>
+
+                    <p id="featuredSummary">
+                        Please wait while the latest news is loaded.
+                    </p>
+
+                    <div
+                        class="news-meta"
+                        id="featuredMeta"
+                    >
+                        JKWI News
+                    </div>
+
+                    <a
+                        href="#"
+                        class="news-read-more"
+                        id="featuredLink"
+                    >
+                        Read Story
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Side Featured Stories -->
+
+            <div
+                class="news-featured-side"
+                id="featuredSide"
+            >
+
+                <article class="news-side-card">
+
+                    <span class="news-category">
+                        Latest
+                    </span>
+
+                    <h3>
+                        Loading latest story...
+                    </h3>
+
+                    <p>
+                        Latest published business and market news.
+                    </p>
+
+                </article>
+
+
+                <article class="news-side-card">
+
+                    <span class="news-category">
+                        Markets
+                    </span>
+
+                    <h3>
+                        Loading market story...
+                    </h3>
+
+                    <p>
+                        Market developments and financial news.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LATEST NEWS
+             ================================================= -->
+
+        <section
+            class="news-section"
+            id="latest-news"
+        >
+
+            <div class="news-section-header">
+
+                <div class="news-section-title">
+
+                    <h2>
+                        Latest News
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#latest-news"
+                    class="news-view-all"
+                    id="viewAllNews"
+                >
+                    View All →
+                </a>
+
+            </div>
+
+
+            <!-- Filters -->
+
+            <div
+                class="news-filters"
+                id="newsFilters"
+            >
+
+                <button
+                    type="button"
+                    class="news-filter active"
+                    data-filter="all"
+                >
+                    All News
+                </button>
+
+                <button
+                    type="button"
+                    class="news-filter"
+                    data-filter="Local Business News"
+                >
+                    Local Business
+                </button>
+
+                <button
+                    type="button"
+                    class="news-filter"
+                    data-filter="International Business News"
+                >
+                    International Business
+                </button>
+
+                <button
+                    type="button"
+                    class="news-filter"
+                    data-filter="Local Market News"
+                >
+                    Local Markets
+                </button>
+
+                <button
+                    type="button"
+                    class="news-filter"
+                    data-filter="International Markets News"
+                >
+                    International Markets
+                </button>
+
+            </div>
+
+
+            <!-- Latest News Cards -->
+
+            <div
+                class="news-grid"
+                id="latestNewsGrid"
+            >
+
+                <div class="news-loading">
+                    Loading latest news...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LOCAL BUSINESS
+             ================================================= -->
+
+        <section
+            class="news-section"
+            id="local-business"
+        >
+
+            <div class="news-section-header">
+
+                <div class="news-section-title">
+
+                    <h2>
+                        Local Business News
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#local-business"
+                    class="news-view-all"
+                    data-channel-link="Local Business News"
+                >
+                    See All →
+                </a>
+
+            </div>
+
+
+            <div
+                class="news-grid"
+                id="localBusinessGrid"
+            >
+
+                <div class="news-loading">
+                    Loading local business news...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INTERNATIONAL BUSINESS
+             ================================================= -->
+
+        <section
+            class="news-section"
+            id="international-business"
+        >
+
+            <div class="news-section-header">
+
+                <div class="news-section-title">
+
+                    <h2>
+                        International Business News
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#international-business"
+                    class="news-view-all"
+                    data-channel-link="International Business News"
+                >
+                    See All →
+                </a>
+
+            </div>
+
+
+            <div
+                class="news-grid"
+                id="internationalBusinessGrid"
+            >
+
+                <div class="news-loading">
+                    Loading international business news...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LOCAL MARKETS
+             ================================================= -->
+
+        <section
+            class="news-section"
+            id="local-markets"
+        >
+
+            <div class="news-section-header">
+
+                <div class="news-section-title">
+
+                    <h2>
+                        Local Market News
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#local-markets"
+                    class="news-view-all"
+                    data-channel-link="Local Market News"
+                >
+                    See All →
+                </a>
+
+            </div>
+
+
+            <div
+                class="news-grid"
+                id="localMarketsGrid"
+            >
+
+                <div class="news-loading">
+                    Loading local market news...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INTERNATIONAL MARKETS
+             ================================================= -->
+
+        <section
+            class="news-section"
+            id="international-markets"
+        >
+
+            <div class="news-section-header">
+
+                <div class="news-section-title">
+
+                    <h2>
+                        International Markets News
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#international-markets"
+                    class="news-view-all"
+                    data-channel-link="International Markets News"
+                >
+                    See All →
+                </a>
+
+            </div>
+
+
+            <div
+                class="news-grid"
+                id="internationalMarketsGrid"
+            >
+
+                <div class="news-loading">
+                    Loading international markets news...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             NEWS CHANNELS
+             ================================================= -->
+
+        <section class="news-section">
+
+            <div class="news-section-header">
+
+                <div class="news-section-title">
+
+                    <h2>
+                        News Channels
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="news-channel-grid">
+
+                <!-- Local Business -->
+
+                <a
+                    href="#local-business"
+                    class="news-channel"
+                >
+
+                    <div class="news-channel-icon">
+                        SA
+                    </div>
+
+                    <h3>
+                        Local Business News
+                    </h3>
+
+                    <p>
+                        Business developments, companies,
+                        industries and economic activity in
+                        South Africa.
+                    </p>
+
+                    <span class="news-channel-link">
+                        Explore →
+                    </span>
+
+                </a>
+
+
+                <!-- International Business -->
+
+                <a
+                    href="#international-business"
+                    class="news-channel"
+                >
+
+                    <div class="news-channel-icon">
+                        GL
+                    </div>
+
+                    <h3>
+                        International Business News
+                    </h3>
+
+                    <p>
+                        Major companies, industries and
+                        business developments from global
+                        markets.
+                    </p>
+
+                    <span class="news-channel-link">
+                        Explore →
+                    </span>
+
+                </a>
+
+
+                <!-- Local Markets -->
+
+                <a
+                    href="#local-markets"
+                    class="news-channel"
+                >
+
+                    <div class="news-channel-icon">
+                        R
+                    </div>
+
+                    <h3>
+                        Local Market News
+                    </h3>
+
+                    <p>
+                        South African markets, companies,
+                        financial activity and economic
+                        developments.
+                    </p>
+
+                    <span class="news-channel-link">
+                        Explore →
+                    </span>
+
+                </a>
+
+
+                <!-- International Markets -->
+
+                <a
+                    href="#international-markets"
+                    class="news-channel"
+                >
+
+                    <div class="news-channel-icon">
+                        $
+                    </div>
+
+                    <h3>
+                        International Markets News
+                    </h3>
+
+                    <p>
+                        Global markets, currencies,
+                        commodities, indices and financial
+                        developments.
+                    </p>
+
+                    <span class="news-channel-link">
+                        Explore →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="news-footer">
+
+        <div class="news-footer-inner">
+
+            <div class="news-footer-brand">
+                JK Winners Investment • News
+            </div>
+
+            <div class="news-footer-text">
+                Business • Markets • Industry • Investment
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         NEWS JAVASCRIPT
+         ===================================================== -->
+
+    <script src="js/news-home.js"></script>
+
+</body>
+</html>

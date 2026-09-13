@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="JKWI Shopping & Renting marketplace for equipment, vehicles, products and assets."
+    >
+    <title>
+        JKWI | Shopping & Renting
+    </title>
+    <!-- JKWI GLOBAL CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+    <!-- SHOPPING CSS -->
+    <link
+        rel="stylesheet"
+        href="css/shopping.css"
+    >
+</head>
+<body>
+<!-- =====================================================
+     MARKETPLACE NAVIGATION
+====================================================== -->
+<header class="market-nav">
+    <div class="market-nav-inner">
+        <!-- LOGO -->
+        <a
+            href="index.html"
+            class="market-logo"
+            aria-label="JK Winners Investment"
+        >
+            <img
+                src="images/logo.png"
+                alt="JK Winners Investment"
+            >
+        </a>
+        <!-- CENTER -->
+        <div class="market-nav-brand">
+            <span>
+                JKWI
+            </span>
+            MARKETPLACE
+        </div>
+        <!-- RIGHT -->
+        <div class="market-nav-actions">
+            <a
+                href="index.html"
+                class="market-home"
+            >
+                Home
+            </a>
+            <button
+                type="button"
+                class="market-cart-open"
+                id="cartOpen"
+            >
+                <span class="cart-icon">
+                    Cart
+                </span>
+                <span
+                    class="cart-badge"
+                    id="cartBadge"
+                >
+                    0
+                </span>
+            </button>
+        </div>
+    </div>
+</header>
+<!-- =====================================================
+     MARKETPLACE HEADER
+====================================================== -->
+<section class="market-header">
+    <div class="market-container">
+        <div class="market-header-content">
+            <div class="market-heading">
+                <span class="market-eyebrow">
+                    JKWI SHOPPING & RENTING
+                </span>
+                <h1>
+                    Shop. Rent. <span>Build.</span>
+                </h1>
+                <p>
+                    Equipment, vehicles and selected assets
+                    available through JK Winners Investment.
+                </p>
+            </div>
+            <!-- MODE -->
+            <div class="market-mode">
+                <button
+                    type="button"
+                    class="market-mode-btn active"
+                    data-mode="shop"
+                >
+                    Shop
+                </button>
+                <button
+                    type="button"
+                    class="market-mode-btn"
+                    data-mode="rent"
+                >
+                    Rent
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     SEARCH AREA
+====================================================== -->
+<section class="market-tools">
+    <div class="market-container">
+        <div class="market-tools-row">
+            <!-- SEARCH -->
+            <div class="market-search">
+                <span class="search-icon">
+                    Search
+                </span>
+                <input
+                    type="search"
+                    id="marketSearch"
+                    placeholder="Search equipment, vehicles or products..."
+                    autocomplete="off"
+                >
+                <button
+                    type="button"
+                    id="clearSearch"
+                    class="clear-search"
+                    aria-label="Clear search"
+                >
+                    ×
+                </button>
+            </div>
+            <!-- CATEGORY -->
+            <select
+                id="marketCategory"
+                class="market-select"
+            >
+                <option value="all">
+                    All Categories
+                </option>
+                <option value="equipment">
+                    Equipment
+                </option>
+                <option value="vehicles">
+                    Vehicles
+                </option>
+                <option value="mining">
+                    Mining
+                </option>
+                <option value="construction">
+                    Construction
+                </option>
+                <option value="agriculture">
+                    Agriculture
+                </option>
+            </select>
+            <!-- SORT -->
+            <select
+                id="marketSort"
+                class="market-select"
+            >
+                <option value="featured">
+                    Featured
+                </option>
+                <option value="price-low">
+                    Price: Low
+                </option>
+                <option value="price-high">
+                    Price: High
+                </option>
+                <option value="name">
+                    Name: A–Z
+                </option>
+            </select>
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     CATEGORY BAR
+====================================================== -->
+<section class="market-categories">
+    <div class="market-container">
+        <div class="market-category-top">
+            <div>
+                <span>
+                    BROWSE
+                </span>
+                <h2>
+                    Categories
+                </h2>
+            </div>
+            <small id="productCount">
+                0 items
+            </small>
+        </div>
+        <div
+            class="market-category-list"
+            id="categoryList"
+        >
+            <button
+                type="button"
+                class="market-category active"
+                data-category="all"
+            >
+                All
+            </button>
+            <button
+                type="button"
+                class="market-category"
+                data-category="equipment"
+            >
+                Equipment
+            </button>
+            <button
+                type="button"
+                class="market-category"
+                data-category="vehicles"
+            >
+                Vehicles
+            </button>
+            <button
+                type="button"
+                class="market-category"
+                data-category="mining"
+            >
+                Mining
+            </button>
+            <button
+                type="button"
+                class="market-category"
+                data-category="construction"
+            >
+                Construction
+            </button>
+            <button
+                type="button"
+                class="market-category"
+                data-category="agriculture"
+            >
+                Agriculture
+            </button>
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     PRODUCTS
+====================================================== -->
+<main class="market-products">
+    <div class="market-container">
+        <div
+            class="market-product-grid"
+            id="productGrid"
+        >
+            <!-- PRODUCTS GENERATED BY shopping.js -->
+        </div>
+        <!-- EMPTY -->
+        <div
+            class="market-empty"
+            id="marketEmpty"
+            hidden
+        >
+            <div class="empty-icon">
+                —
+            </div>
+            <h3>
+                Nothing found
+            </h3>
+            <p>
+                Try another search or category.
+            </p>
+            <button
+                type="button"
+                id="resetFilters"
+            >
+                Reset Filters
+            </button>
+        </div>
+    </div>
+</main>
+<!-- =====================================================
+     PRODUCT QUICK VIEW
+====================================================== -->
+<div
+    class="quick-view-overlay"
+    id="quickViewOverlay"
+    hidden
+>
+    <div
+        class="quick-view"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Product details"
+    >
+        <button
+            type="button"
+            class="quick-view-close"
+            id="quickViewClose"
+            aria-label="Close"
+        >
+            ×
+        </button>
+        <div
+            class="quick-view-content"
+            id="quickViewContent"
+        >
+            <!-- GENERATED BY JS -->
+        </div>
+    </div>
+</div>
+<!-- =====================================================
+     CART OVERLAY
+====================================================== -->
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+></div>
+<!-- =====================================================
+     CART DRAWER
+====================================================== -->
+<aside
+    class="market-cart"
+    id="marketCart"
+    aria-label="Shopping cart"
+>
+    <!-- CART HEADER -->
+    <div class="cart-header">
+        <div>
+            <span>
+                JKWI
+            </span>
+            <h2>
+                Your Cart
+            </h2>
+        </div>
+        <button
+            type="button"
+            class="cart-close"
+            id="cartClose"
+            aria-label="Close cart"
+        >
+            ×
+        </button>
+    </div>
+    <!-- CART MODE -->
+    <div class="cart-mode-info">
+        <span id="cartModeLabel">
+            Shopping Cart
+        </span>
+        <small id="cartItemCount">
+            0 items
+        </small>
+    </div>
+    <!-- CART ITEMS -->
+    <div
+        class="cart-body"
+        id="cartBody"
+    >
+        <div class="cart-empty">
+            <strong>
+                Your cart is empty
+            </strong>
+            <span>
+                Add something from the marketplace.
+            </span>
+        </div>
+    </div>
+    <!-- CART FOOTER -->
+    <div class="cart-footer">
+        <div class="cart-summary-row">
+            <span>
+                Subtotal
+            </span>
+            <strong id="cartSubtotal">
+                R0
+            </strong>
+        </div>
+        <div class="cart-summary-note">
+            Final pricing may depend on availability,
+            delivery and rental terms.
+        </div>
+        <button
+            type="button"
+            class="checkout-button"
+            id="checkoutButton"
+        >
+            Proceed to Checkout
+            <span>
+                →
+            </span>
+        </button>
+    </div>
+</aside>
+<!-- =====================================================
+     RENTAL DURATION MODAL
+====================================================== -->
+<div
+    class="rental-overlay"
+    id="rentalOverlay"
+    hidden
+>
+    <div class="rental-modal">
+        <button
+            type="button"
+            class="rental-close"
+            id="rentalClose"
+            aria-label="Close"
+        >
+            ×
+        </button>
+        <span class="market-eyebrow">
+            RENTAL PERIOD
+        </span>
+        <h2>
+            How long do you need it?
+        </h2>
+        <p>
+            Select your rental duration before adding
+            the asset to your cart.
+        </p>
+        <div class="rental-options">
+            <button
+                type="button"
+                class="rental-option active"
+                data-days="1"
+            >
+                <strong>
+                    1 Day
+                </strong>
+                <span>
+                    Daily rental
+                </span>
+            </button>
+            <button
+                type="button"
+                class="rental-option"
+                data-days="7"
+            >
+                <strong>
+                    7 Days
+                </strong>
+                <span>
+                    Weekly rental
+                </span>
+            </button>
+            <button
+                type="button"
+                class="rental-option"
+                data-days="30"
+            >
+                <strong>
+                    30 Days
+                </strong>
+                <span>
+                    Monthly rental
+                </span>
+            </button>
+        </div>
+        <button
+            type="button"
+            class="rental-confirm"
+            id="rentalConfirm"
+        >
+            Add Rental to Cart
+        </button>
+    </div>
+</div>
+<!-- =====================================================
+     TOAST
+====================================================== -->
+<div
+    class="market-toast"
+    id="marketToast"
+    role="status"
+    aria-live="polite"
+>
+    <span class="toast-check">
+        ✓
+    </span>
+    <div>
+        <strong id="toastTitle">
+            Added to cart
+        </strong>
+        <small id="toastMessage">
+            Item added successfully.
+        </small>
+    </div>
+</div>
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+<script src="js/shopping.js"></script>
+</body>
+</html>

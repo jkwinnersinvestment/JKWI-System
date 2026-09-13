@@ -20,29 +20,12 @@ const db = require("./config/database");
 
 
 // ==========================================
-// EMAIL SERVICE
-// ==========================================
-
-const {
-    verifyEmailConnection
-} = require("./services/emailService");
-
-
-// ==========================================
 // ROUTES
 // ==========================================
 
-const authRoutes =
-    require("./routes/authRoutes");
-
-const newsRoutes =
-    require("./routes/newsRoutes");
-
-const userRoutes =
-    require("./routes/userRoutes");
-
-const verificationRoutes =
-    require("./routes/verificationRoutes");
+const authRoutes = require("./routes/authRoutes");
+const newsRoutes = require("./routes/newsRoutes");
+const userRoutes = require("./routes/userRoutes");
 
 
 // ==========================================
@@ -53,12 +36,37 @@ const app = express();
 
 
 // ==========================================
+// PATHS
+// ==========================================
+//
+// server.js:
+// JKWI-System/backend/server.js
+//
+// Frontend:
+// JKWI-System/frontend/
+//
+// Uploads:
+// JKWI-System/uploads/
+// ==========================================
+
+const FRONTEND_PATH = path.join(
+    __dirname,
+    "..",
+    "frontend"
+);
+
+const UPLOADS_PATH = path.join(
+    __dirname,
+    "..",
+    "uploads"
+);
+
+
+// ==========================================
 // MIDDLEWARE
 // ==========================================
 
-app.use(
-    express.json()
-);
+app.use(express.json());
 
 app.use(
     express.urlencoded({
@@ -66,9 +74,7 @@ app.use(
     })
 );
 
-app.use(
-    cors()
-);
+app.use(cors());
 
 app.use(
     helmet({
@@ -84,9 +90,7 @@ app.use(
 // ==========================================
 
 const limiter = rateLimit({
-
-    windowMs:
-        15 * 60 * 1000,
+    windowMs: 15 * 60 * 1000,
 
     max: 100,
 
@@ -95,14 +99,9 @@ const limiter = rateLimit({
     legacyHeaders: false,
 
     message: {
-
         success: false,
-
-        message:
-            "Too many requests. Please try again later."
-
+        message: "Too many requests. Please try again later."
     }
-
 });
 
 app.use(limiter);
@@ -113,12 +112,7 @@ app.use(limiter);
 // ==========================================
 
 app.use(
-    express.static(
-        path.join(
-            __dirname,
-            "../frontend"
-        )
-    )
+    express.static(FRONTEND_PATH)
 );
 
 
@@ -128,13 +122,7 @@ app.use(
 
 app.use(
     "/uploads",
-
-    express.static(
-        path.join(
-            __dirname,
-            "../uploads"
-        )
-    )
+    express.static(UPLOADS_PATH)
 );
 
 
@@ -142,89 +130,78 @@ app.use(
 // HOME PAGE
 // ==========================================
 
-app.get(
-    "/",
-    (req, res) => {
+app.get("/", (req, res) => {
 
-        res.sendFile(
-            path.join(
-                __dirname,
-                "../frontend/index.html"
-            )
-        );
+    res.sendFile(
+        path.join(
+            FRONTEND_PATH,
+            "index.html"
+        )
+    );
 
-    }
-);
+});
 
 
 // ==========================================
 // API HEALTH CHECK
 // ==========================================
 
-app.get(
-    "/api",
-    (req, res) => {
+app.get("/api", (req, res) => {
 
-        res.json({
+    res.json({
 
-            success: true,
+        success: true,
 
-            message:
-                "JK Winners Investment API Running"
+        message:
+            "JK Winners Investment API Running"
 
-        });
+    });
 
-    }
-);
+});
 
 
 // ==========================================
 // DATABASE HEALTH CHECK
 // ==========================================
 
-app.get(
-    "/api/database",
+app.get("/api/database", (req, res) => {
 
-    (req, res) => {
+    db.query(
+        "SELECT 1 AS connected",
 
-        db.query(
-            "SELECT 1 AS connected",
+        (err) => {
 
-            (err) => {
+            if (err) {
 
-                if (err) {
+                console.error(
+                    "Database health check failed:",
+                    err
+                );
 
-                    console.error(
-                        "Database health check failed:",
-                        err
-                    );
+                return res.status(500).json({
 
-                    return res.status(500).json({
-
-                        success: false,
-
-                        message:
-                            "Database connection failed"
-
-                    });
-
-                }
-
-
-                res.json({
-
-                    success: true,
+                    success: false,
 
                     message:
-                        "JKWI Database Connected Successfully"
+                        "Database connection failed"
 
                 });
 
             }
-        );
 
-    }
-);
+            res.json({
+
+                success: true,
+
+                message:
+                    "JKWI Database Connected Successfully"
+
+            });
+
+        }
+    );
+
+});
 
 
 // ==========================================
@@ -240,30 +217,10 @@ app.use(
 // ==========================================
 // USER API
 // ==========================================
-//
-// POST /api/users/register
-//
-// ==========================================
 
 app.use(
     "/api/users",
     userRoutes
-);
-
-
-// ==========================================
-// VERIFICATION API
-// ==========================================
-//
-// POST /api/verification/send
-//
-// POST /api/verification/verify
-//
-// ==========================================
-
-app.use(
-    "/api/verification",
-    verificationRoutes
 );
 
 
@@ -278,31 +235,42 @@ app.use(
 
 
 // ==========================================
-// 404 HANDLER
+// API 404 HANDLER
 // ==========================================
 
-app.use(
-    (req, res, next) => {
+app.use((req, res, next) => {
 
-        if (
-            req.path.startsWith("/api/")
-        ) {
+    if (
+        req.path.startsWith("/api/")
+    ) {
 
-            return res.status(404).json({
+        return res.status(404).json({
 
-                success: false,
+            success: false,
 
-                message:
-                    "API endpoint not found"
+            message:
+                "API endpoint not found"
 
-            });
-
-        }
-
-        next();
+        });
 
     }
-);
+
+    next();
+
+});
+
+
+// ==========================================
+// GENERAL 404 HANDLER
+// ==========================================
+
+app.use((req, res) => {
+
+    res.status(404).send(
+        "Page not found"
+    );
+
+});
 
 
 // ==========================================
@@ -341,7 +309,7 @@ const PORT =
 app.listen(
     PORT,
 
-    async () => {
+    () => {
 
         console.log("");
 
@@ -362,27 +330,27 @@ app.listen(
         );
 
         console.log(
-            ` Server: http://localhost:${PORT}`
+            ` Server running on port ${PORT}`
         );
 
         console.log(
-            ` API:    http://localhost:${PORT}/api`
+            ` API: /api`
         );
 
         console.log(
-            ` Users:  http://localhost:${PORT}/api/users`
+            ` Database: /api/database`
         );
 
         console.log(
-            ` Verification: http://localhost:${PORT}/api/verification`
+            ` Users: /api/users`
         );
 
         console.log(
-            ` News:   http://localhost:${PORT}/api/news`
+            ` News: /api/news`
         );
 
         console.log(
-            ` Uploads: http://localhost:${PORT}/uploads`
+            ` Uploads: /uploads`
         );
 
         console.log(
@@ -390,13 +358,6 @@ app.listen(
         );
 
         console.log("");
-
-
-        // ==========================================
-        // VERIFY EMAIL SERVICE
-        // ==========================================
-
-        await verifyEmailConnection();
 
     }
 );

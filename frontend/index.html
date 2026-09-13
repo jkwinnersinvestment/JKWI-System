@@ -38,245 +38,183 @@
 
 <body>
 
-<!--==================================================
-SECTION 01 - NAVIGATION
-===================================================-->
 
-<header class="header">
-
-    <nav class="navbar">
-
-        <!-- LOGO -->
-
-        <a href="index.html" class="logo">
-
+<!-- ==========================================
+     JKWI NAVIGATION
+========================================== -->
+<header class="jkwi-nav" id="jkwiNav">
+    <div class="nav-container">
+        <!-- ==================================
+             BRAND
+        =================================== -->
+        <a href="index.html" class="nav-logo">
             <img
                 src="images/logo.png"
-                alt="JK Winners Investment Logo"
+                alt="JK Winners Investment"
             >
-
-            <div class="logo-text">
-
-                <h2>JK Winners Investment</h2>
-
-                <span>Assisting Companies</span>
-
-            </div>
-
+            <span class="nav-brand">
+                <strong>JK Winners</strong>
+                <small>Investment</small>
+            </span>
         </a>
-
-
-        <!-- NAVIGATION -->
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html" class="active">
-                    Home
+        <!-- ==================================
+             MAIN NAVIGATION
+        =================================== -->
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="about.html">
+                About
+            </a>
+            <!-- DIVISIONS -->
+            <div class="nav-dropdown">
+                <a href="divisions.html">
+                    <span>Divisions</span>
+                    <span>⌄</span>
                 </a>
-            </li>
-
-            <li class="dropdown">
-
-                <a href="#">
-                    About
-                </a>
-
-                <ul class="dropdown-menu">
-
-                    <li>
-                        <a href="about.html">
-                            Company Overview
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Chairman's Message
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Vision & Mission
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Our History
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-
-
-            <li class="dropdown">
-
-                <a href="#">
-                    Divisions
-                </a>
-
-                <ul class="dropdown-menu">
-
-                    <li>
-                        <a href="mining.html">
-                            Mining
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="infrastructure.html">
-                            Infrastructure
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="finance.html">
-                            Finance
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="legal.html">
-                            Legal Services
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="media.html">
-                            Media
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="services.html">
-                            Professional Services
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="farming.html">
-                            Agriculture
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="social.html">
-                            Social Development
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-
-
-            <li class="dropdown">
-
-                <a href="#">
-                    Projects
-                </a>
-
-                <ul class="dropdown-menu">
-
-                    <li>
-                        <a href="projects.html">
-                            Current Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Completed Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            Partnerships
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-
-
-            <li>
-                <a href="investor.html">
-                    Investor Centre
-                </a>
-            </li>
-
-
-            <li>
-                <a href="news.html">
-                    News
-                </a>
-            </li>
-
-
-            <li>
-                <a href="careers.html">
-                    Careers
-                </a>
-            </li>
-
-
-            <li>
-                <a href="contact.html">
-                    Contact
-                </a>
-            </li>
-
-        </ul>
-
-
-        <!-- RIGHT SIDE -->
-
-        <div class="nav-right">
-
+                <div class="dropdown-menu">
+                    <a href="mining.html">
+                        Mining
+                    </a>
+                    <a href="infrastructure.html">
+                        Infrastructure
+                    </a>
+                    <a href="finance.html">
+                        Finance
+                    </a>
+                    <a href="legal.html">
+                        Legal
+                    </a>
+                    <a href="media.html">
+                        Media
+                    </a>
+                    <a href="social-development.html">
+                        Social Development
+                    </a>
+                    <a href="professional-services.html">
+                        Professional Services
+                    </a>
+                    <a href="farming.html">
+                        Farming
+                    </a>
+                </div>
+            </div>
+            <a href="projects.html">
+                Projects
+            </a>
+            <a href="markets.html">
+                Markets
+            </a>
+            <a href="news.html">
+                News
+            </a>
+            <a href="investors.html">
+                Investors
+            </a>
+            <a href="ai-assistant.html" class="ai-nav-link">
+                JKWI AI
+            </a>
+        </nav>
+        <!-- ==================================
+             DESKTOP ACCOUNT ACTIONS
+        =================================== -->
+        <div class="nav-actions">
             <a
                 href="login.html"
                 class="nav-login"
             >
                 Login
             </a>
-
             <a
                 href="register.html"
-                class="nav-register"
+                class="nav-account"
             >
-                Register
+                Create Account
             </a>
-
-            <button class="contact-btn">
-                Get in Touch
+        </div>
+        <!-- ==================================
+             MOBILE ACCOUNT
+        =================================== -->
+        <div class="mobile-account">
+            <button
+                class="account-toggle"
+                id="accountToggle"
+                type="button"
+                aria-label="Account"
+                aria-expanded="false"
+            >
+                <!-- Person / Profile Icon -->
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="3.5"
+                    ></circle>
+                    <path
+                        d="M5 20c.8-4 3.2-6 7-6s6.2 2 7 6"
+                    ></path>
+                </svg>
             </button>
-
+            <!-- MOBILE ACCOUNT DROPDOWN -->
+            <div
+                class="account-menu"
+                id="accountMenu"
+            >
+                <!-- Account Header -->
+                <div class="account-title">
+                    <span class="account-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="3.5"
+                            ></circle>
+                            <path
+                                d="M5 20c.8-4 3.2-6 7-6s6.2 2 7 6"
+                            ></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <strong>
+                            Sign In
+                        </strong>
+                        <small>
+                            Access your JKWI account
+                        </small>
+                    </div>
+                </div>
+                <!-- Account Links -->
+                <a href="login.html">
+                    Login
+                </a>
+                <a href="register.html">
+                    Create Account
+                </a>
+            </div>
         </div>
-
-
-        <!-- MOBILE MENU -->
-
-        <div class="menu-toggle">
-
+        <!-- ==================================
+             MOBILE HAMBURGER
+        =================================== -->
+        <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+        >
             <span></span>
-
             <span></span>
-
             <span></span>
-
-        </div>
-
-    </nav>
-
+        </button>
+    </div>
 </header>
-
-
 <!--==================================================
 SECTION 02 - HERO
 ===================================================-->
@@ -341,7 +279,81 @@ SECTION 02 - HERO
 
 </section>
 
+<!-- ==========================
+     JKWI AI ASSISTANT
+========================== -->
 
+<section class="jkwi-ai-section">
+
+    <div class="jkwi-ai-content">
+
+        <span class="eyebrow">
+            JKWI DIGITAL ASSISTANT
+        </span>
+
+        <h2>
+            Need Help Finding Something?
+        </h2>
+
+        <p>
+            Ask the JKWI AI Assistant about our divisions,
+            services, market information, news, products,
+            specialists and business opportunities.
+        </p>
+
+        <a
+            href="ai-assistant.html"
+            class="ai-button"
+        >
+            Ask JKWI AI →
+        </a>
+
+    </div>
+
+
+    <div class="jkwi-ai-card">
+
+        <div class="ai-card-header">
+
+            <div class="ai-mini-icon">
+                AI
+            </div>
+
+            <div>
+
+                <strong>
+                    JKWI AI Assistant
+                </strong>
+
+                <small>
+                    Online Assistant
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="ai-preview">
+
+            <div class="preview-message ai">
+                How can I help you today?
+            </div>
+
+            <div class="preview-message user">
+                I want to know about JKWI services.
+            </div>
+
+            <div class="preview-message ai">
+                I can help you explore our divisions,
+                services and business opportunities.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <!--==================================================
 BUSINESS DIVISIONS
 ===================================================-->
@@ -618,112 +630,324 @@ NEWS
 
 
 <!--==================================================
-LIVE MARKET
+JKWI MARKET PULSE
 ===================================================-->
 
-<section class="market-section">
+<section class="jkwi-market-pulse" id="marketPulse">
 
-    <div class="market-title">
+    <div class="market-pulse-container">
 
-        <span>
-            LIVE MARKET DATA
-        </span>
+        <!-- TOP BAR -->
+
+        <div class="market-pulse-top">
+
+            <div class="market-pulse-title">
+
+                <span class="market-pulse-live">
+                    <i></i>
+                    LIVE
+                </span>
+
+                <strong>
+                    JKWI MARKET PULSE
+                </strong>
+
+            </div>
+
+
+            <a
+                href="markets.html"
+                class="market-pulse-link"
+            >
+                Full Markets →
+            </a>
+
+        </div>
+
+
+        <!-- CATEGORY NAVIGATION -->
+
+        <div class="market-pulse-categories">
+
+            <button
+                type="button"
+                class="pulse-category active"
+                data-market-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                type="button"
+                class="pulse-category"
+                data-market-filter="metals"
+            >
+                Metals
+            </button>
+
+            <button
+                type="button"
+                class="pulse-category"
+                data-market-filter="energy"
+            >
+                Energy
+            </button>
+
+            <button
+                type="button"
+                class="pulse-category"
+                data-market-filter="agriculture"
+            >
+                Agriculture
+            </button>
+
+            <button
+                type="button"
+                class="pulse-category"
+                data-market-filter="forex"
+            >
+                Forex
+            </button>
+
+            <button
+                type="button"
+                class="pulse-category"
+                data-market-filter="indices"
+            >
+                Indices
+            </button>
+
+            <button
+                type="button"
+                class="pulse-category"
+                data-market-filter="crypto"
+            >
+                Crypto
+            </button>
+
+        </div>
+
+
+        <!-- MARKET STAGE -->
+
+        <div class="market-pulse-stage">
+
+
+            <!-- MOVING TRACK -->
+
+            <div
+                class="market-pulse-track"
+                id="marketPulseTrack"
+            >
+
+                <!-- MARKET CARDS GENERATED BY JS -->
+
+            </div>
+
+
+            <!-- EDGE FADE -->
+
+            <div class="market-pulse-fade left"></div>
+
+            <div class="market-pulse-fade right"></div>
+
+
+        </div>
+
+
+        <!-- BOTTOM STATUS -->
+
+        <div class="market-pulse-bottom">
+
+            <span>
+                Global markets
+            </span>
+
+            <div class="market-pulse-status">
+
+                <span class="pulse-status-dot"></span>
+
+                <span id="marketPulseStatus">
+                    Market activity monitored continuously
+                </span>
+
+            </div>
+
+            <span id="marketPulseTime">
+                Updated now
+            </span>
+
+        </div>
 
     </div>
 
+</section>
+<!--==================================================
+JKWI SHOPPING & RENTING
+===================================================-->
 
-    <div class="market-ticker">
+<section class="shopping-preview" id="shopping">
 
-        <div class="ticker-track">
+    <div class="shopping-preview-container">
 
-            <div class="market-item">
+        <div class="shopping-preview-heading">
 
-                Gold
-
-                <span id="gold-price">
-                    $2,350
-                </span>
-
-                <small class="up">
-                    ▲ 1.2%
-                </small>
-
-            </div>
-
-
-            <div class="market-item">
-
-                Silver
-
-                <span id="silver-price">
-                    $31.20
-                </span>
-
-                <small class="down">
-                    ▼ 0.3%
-                </small>
-
-            </div>
-
-
-            <div class="market-item">
-
-                Platinum
-
-                <span id="platinum-price">
-                    $980
-                </span>
-
-                <small class="up">
-                    ▲ 0.8%
-                </small>
-
-            </div>
-
-
-            <div class="market-item">
-
-                Bitcoin
-
-                <span id="btc-price">
-                    $118,000
-                </span>
-
-                <small class="up">
-                    ▲ 2.1%
-                </small>
-
-            </div>
-
-
-            <div class="market-item">
-
-                Gold
-
+            <div>
                 <span>
-                    $2,350
+                    JKWI SHOPPING & RENTING
                 </span>
 
-                <small class="up">
-                    ▲ 1.2%
-                </small>
+                <h2>
+                    Shop & Rent Across JKWI
+                </h2>
 
+                <p>
+                    Explore products, equipment, vehicles and other
+                    available assets from across the JKWI ecosystem,
+                    with convenient purchasing and rental options.
+                </p>
             </div>
 
+            <a
+                href="shopping.html"
+                class="shopping-see-more"
+            >
+                See More →
+            </a>
 
-            <div class="market-item">
+        </div>
 
-                Silver
 
-                <span>
-                    $31.20
-                </span>
+        <div class="shopping-featured">
 
-                <small class="down">
-                    ▼ 0.3%
-                </small>
+            <!-- FEATURED 01 -->
 
-            </div>
+            <a
+                href="shopping.html"
+                class="shopping-card"
+            >
+
+                <div class="shopping-card-image">
+
+                    <img
+                        src="images/equipment/excavator.jpg"
+                        alt="Excavator"
+                    >
+
+                    <span class="shopping-badge">
+                        RENT
+                    </span>
+
+                </div>
+
+                <div class="shopping-card-content">
+
+                    <span>
+                        Equipment
+                    </span>
+
+                    <h3>
+                        Excavators
+                    </h3>
+
+                    <p>
+                        Available for sale and rental.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- FEATURED 02 -->
+
+            <a
+                href="shopping.html"
+                class="shopping-card"
+            >
+
+                <div class="shopping-card-image">
+
+                    <img
+                        src="images/equipment/dump-truck.jpg"
+                        alt="Dump Truck"
+                    >
+
+                    <span class="shopping-badge">
+                        RENT
+                    </span>
+
+                </div>
+
+                <div class="shopping-card-content">
+
+                    <span>
+                        Vehicles
+                    </span>
+
+                    <h3>
+                        Dump Trucks
+                    </h3>
+
+                    <p>
+                        Explore available vehicles.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- FEATURED 03 -->
+
+            <a
+                href="shopping.html"
+                class="shopping-card"
+            >
+
+                <div class="shopping-card-image">
+
+                    <img
+                        src="images/equipment/mining-truck.jpg"
+                        alt="Mining Truck"
+                    >
+
+                    <span class="shopping-badge">
+                        SALE & RENT
+                    </span>
+
+                </div>
+
+                <div class="shopping-card-content">
+
+                    <span>
+                        Heavy Equipment
+                    </span>
+
+                    <h3>
+                        Mining Trucks
+                    </h3>
+
+                    <p>
+                        Purchase or rent selected assets.
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <div class="shopping-bottom">
+
+            <span>
+                Products • Equipment • Vehicles • Rentals
+            </span>
+
+            <a href="shopping.html">
+                Explore Shopping & Renting →
+            </a>
 
         </div>
 
@@ -731,189 +955,6 @@ LIVE MARKET
 
 </section>
 
-
-<!--==================================================
-EQUIPMENT
-===================================================-->
-
-<div class="equipment-market">
-
-    <div class="equipment-item">
-
-        <img
-            src="images/equipment/excavator.jpg"
-            alt="Excavator"
-        >
-
-        <div>
-
-            <h4>
-                Excavators
-            </h4>
-
-            <span>
-                Sale & Rental
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="equipment-item">
-
-        <img
-            src="images/equipment/dump-truck.jpg"
-            alt="Dump Truck"
-        >
-
-        <div>
-
-            <h4>
-                Dump Trucks
-            </h4>
-
-            <span>
-                Sale & Rental
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="equipment-item">
-
-        <img
-            src="images/equipment/bulldozer.jpg"
-            alt="Bulldozer"
-        >
-
-        <div>
-
-            <h4>
-                Bulldozers
-            </h4>
-
-            <span>
-                Sale & Rental
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="equipment-item">
-
-        <img
-            src="images/equipment/front.jpg"
-            alt="Front-End Loader"
-        >
-
-        <div>
-
-            <h4>
-                Front-End Loaders
-            </h4>
-
-            <span>
-                Sale & Rental
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="equipment-item">
-
-        <img
-            src="images/equipment/drill.jpg"
-            alt="Drilling Rig"
-        >
-
-        <div>
-
-            <h4>
-                Drilling Rigs
-            </h4>
-
-            <span>
-                Sale & Rental
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="equipment-item">
-
-        <img
-            src="images/equipment/crusher.jpg"
-            alt="Crusher"
-        >
-
-        <div>
-
-            <h4>
-                Crushers
-            </h4>
-
-            <span>
-                Sale & Rental
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="equipment-item">
-
-        <img
-            src="images/equipment/grader.jpg"
-            alt="Grader"
-        >
-
-        <div>
-
-            <h4>
-                Graders
-            </h4>
-
-            <span>
-                Sale & Rental
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="equipment-item">
-
-        <img
-            src="images/equipment/mining-truck.jpg"
-            alt="Mining Truck"
-        >
-
-        <div>
-
-            <h4>
-                Mining Trucks
-            </h4>
-
-            <span>
-                Sale & Rental
-            </span>
-
-        </div>
-
-    </div>
-
-</div>
 
 
 <!--==================================================

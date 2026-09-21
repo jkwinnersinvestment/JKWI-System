@@ -26,7 +26,7 @@
             <!-- LOGO -->
 
             <img
-                src="assets/images/jkwi-logo.png"
+                src="images/logo.png"
                 alt="JK Winners Investment"
                 class="jkwi-logo"
             >
@@ -39,147 +39,114 @@
             </p>
 
 
-            <!-- ACCOUNT TYPE -->
-
-            <div class="account-types">
-
-                <button
-                    type="button"
-                    class="account-type active"
-                    data-type="customer"
-                >
-                    Customer
-                </button>
-
-                <button
-                    type="button"
-                    class="account-type"
-                    data-type="worker"
-                >
-                    Worker
-                </button>
-
-                <button
-                    type="button"
-                    class="account-type"
-                    data-type="partner"
-                >
-                    Partner
-                </button>
-
-            </div>
-
-
             <form id="registerForm">
 
-                <input
-                    type="hidden"
-                    id="accountType"
-                    value="customer"
-                >
 
+                <div class="field">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" autocomplete="given-name" required>
+                    <small class="field-error" id="firstNameError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="lastName">Surname</label>
+                    <input id="lastName" type="text" autocomplete="family-name" required>
+                    <small class="field-error" id="lastNameError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="idNumber">ID Number</label>
+                    <input id="idNumber" type="text" inputmode="numeric" maxlength="13" pattern="[0-9]{13}" autocomplete="off" required>
+                    <small class="field-help" id="idDetails"></small>
+                    <small class="field-error" id="idNumberError"></small>
+                </div>
+
+                <fieldset class="address-group">
+                    <legend>Physical Address</legend>
+
+                    <div class="field">
+                        <label for="province">Province</label>
+                        <select id="province" autocomplete="address-level1" required>
+                            <option value="">Select province</option>
+                            <option>Eastern Cape</option>
+                            <option>Free State</option>
+                            <option>Gauteng</option>
+                            <option>KwaZulu-Natal</option>
+                            <option>Limpopo</option>
+                            <option>Mpumalanga</option>
+                            <option>Northern Cape</option>
+                            <option>North West</option>
+                            <option>Western Cape</option>
+                        </select>
+                        <small class="field-error" id="provinceError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="city">City / Town</label>
+                        <select id="city" autocomplete="address-level2" required disabled>
+                            <option value="">Select province first</option>
+                        </select>
+                        <small class="field-error" id="cityError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="postalCode">Postal Code</label>
+                        <input id="postalCode" type="text" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" autocomplete="postal-code" required>
+                        <small class="field-error" id="postalCodeError"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="addressLine1">Address Line 1</label>
+                        <div class="address-autocomplete">
+                            <input id="addressLine1" type="text" autocomplete="address-line1" required>
+                            <div id="addressSuggestions" class="address-suggestions" role="listbox"></div>
+                        </div>
+                        <small class="field-error" id="addressLine1Error"></small>
+                    </div>
+
+                    <div class="field">
+                        <label for="addressLine2">Address Line 2 <span class="optional">(optional)</span></label>
+                        <input id="addressLine2" type="text" autocomplete="address-line2">
+                        <small class="field-error" id="addressLine2Error"></small>
+                    </div>
+                </fieldset>
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" autocomplete="email" required>
+                    <small class="field-error" id="emailError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="082 123 4567" required>
+                    <small class="field-error" id="phoneError"></small>
+                </div>
 
                 <div class="name-row">
 
                     <div class="field">
 
-                        <label>
-                            First Name
-                        </label>
-
-                        <input
-                            id="firstName"
-                            type="text"
-                            autocomplete="given-name"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="field">
-
-                        <label>
-                            Last Name
-                        </label>
-
-                        <input
-                            id="lastName"
-                            type="text"
-                            autocomplete="family-name"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>
-                        Email
-                    </label>
-
-                    <input
-                        id="email"
-                        type="email"
-                        autocomplete="email"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>
-                        Phone Number
-                    </label>
-
-                    <input
-                        id="phone"
-                        type="tel"
-                        inputmode="tel"
-                        autocomplete="tel"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="name-row">
-
-                    <div class="field">
-
-                        <label>
+                        <label for="password">
                             Password
                         </label>
 
-                        <input
-                            id="password"
-                            type="password"
-                            minlength="8"
-                            autocomplete="new-password"
-                            required
-                        >
+                        <input id="password" type="password" minlength="8" autocomplete="new-password" required>
+
+                        <small class="field-error" id="passwordError"></small>
 
                     </div>
 
 
                     <div class="field">
 
-                        <label>
-                            Confirm
+                        <label for="confirmPassword">
+                            Confirm Password
                         </label>
 
-                        <input
-                            id="confirmPassword"
-                            type="password"
-                            minlength="8"
-                            autocomplete="new-password"
-                            required
-                        >
+                        <input id="confirmPassword" type="password" minlength="8" autocomplete="new-password" required>
+
+                        <small class="field-error" id="confirmPasswordError"></small>
 
                     </div>
 
@@ -195,6 +162,7 @@
                 <button
                     id="registerButton"
                     type="submit"
+                    disabled
                 >
                     Create Account
                 </button>
@@ -217,6 +185,9 @@
     </main>
 
 
+    <script>
+        window.JKWI_GOOGLE_MAPS_API_KEY = "YOUR_KEY";
+    </script>
     <script src="js/register.js"></script>
 
 </body>

@@ -3,6 +3,63 @@ CREATE DATABASE jkwi_system;
 USE jkwi_system;
 
 
+-- JKWI USER ACCOUNTS
+
+CREATE TABLE users (
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    jkwi_id VARCHAR(10) NOT NULL UNIQUE,
+
+    first_name VARCHAR(100) NOT NULL,
+
+    last_name VARCHAR(100) NOT NULL,
+
+    email VARCHAR(255) NOT NULL UNIQUE,
+
+    id_number VARCHAR(13) NOT NULL UNIQUE,
+
+    phone VARCHAR(20) NOT NULL,
+
+    address_line_1 VARCHAR(255) NOT NULL,
+
+    address_line_2 VARCHAR(255),
+
+    city VARCHAR(100) NOT NULL,
+
+    province VARCHAR(100) NOT NULL,
+
+    postal_code VARCHAR(4) NOT NULL,
+
+    password VARCHAR(255) NOT NULL,
+
+    account_type VARCHAR(20) NOT NULL DEFAULT 'customer',
+
+    status VARCHAR(30) NOT NULL DEFAULT 'pending_verification',
+
+    email_verified BOOLEAN DEFAULT FALSE,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+CREATE TABLE email_verifications (
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    user_id INT NOT NULL,
+
+    code_hash VARCHAR(255) NOT NULL,
+
+    expires_at DATETIME NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+
+);
+
+
 -- USERS / INVESTORS TABLE
 
 CREATE TABLE investors (

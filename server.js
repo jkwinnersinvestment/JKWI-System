@@ -88,10 +88,14 @@ app.use(
     express.static(
         path.join(
             __dirname,
-            "../frontend"
+            "frontend"
         )
     )
 );
+
+app.get("/VerifyEmail", (req, res) => {
+    res.sendFile(path.join(__dirname, "frontend/VerifyEmail.html"));
+});
 
 
 // ==========================================
@@ -103,7 +107,7 @@ app.use(
     express.static(
         path.join(
             __dirname,
-            "../uploads"
+            "uploads"
         )
     )
 );
@@ -118,7 +122,7 @@ app.get("/", (req, res) => {
     res.sendFile(
         path.join(
             __dirname,
-            "../frontend/index.html"
+            "frontend/index.html"
         )
     );
 

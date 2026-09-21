@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const loginForm = document.getElementById("loginForm");
-    const winnersIdInput = document.getElementById("winnersId");
+    const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
     const passwordToggle = document.getElementById("passwordToggle");
 
@@ -30,20 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
             passwordToggle.textContent = "Show";
 
         }
-
-    });
-
-
-    // ==========================================
-    // ONLY ALLOW NUMBERS IN WINNERS ID
-    // ==========================================
-
-    winnersIdInput.addEventListener("input", () => {
-
-        winnersIdInput.value =
-            winnersIdInput.value
-                .replace(/\D/g, "")
-                .slice(0, 10);
 
     });
 
@@ -100,27 +86,17 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
 
-        const winnersId =
-            winnersIdInput.value.trim();
+        const email =
+            emailInput.value.trim().toLowerCase();
 
         const password =
             passwordInput.value;
 
 
-        // ==========================================
-        // VALIDATE WINNERS ID
-        // ==========================================
-
-        if (!/^\d{10}$/.test(winnersId)) {
-
-            showMessage(
-                "Please enter your 10-digit Winners ID."
-            );
-
-            winnersIdInput.focus();
-
+        if (!emailInput.checkValidity()) {
+            showMessage("Please enter a valid email address.");
+            emailInput.focus();
             return;
-
         }
 
 
@@ -154,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const response =
                 await fetch(
-                    "/api/auth/login",
+                    "/api/users/login",
                     {
 
                         method: "POST",
@@ -166,8 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         body: JSON.stringify({
 
-                            winnersId:
-                                winnersId,
+                            email,
 
                             password:
                                 password
@@ -188,6 +163,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!response.ok || !data.success) {
 
+                if (data.redirect) {
+                    window.location.href = data.redirect;
+                    return;
+                }
+
                 showMessage(
                     data.message ||
                     "Login failed. Please check your credentials."
@@ -204,35 +184,8 @@ document.addEventListener("DOMContentLoaded", () => {
             // SAVE JWT
             // ==========================================
 
-            const remember =
-                document.getElementById("remember").checked;
-
-
-            if (remember) {
-
-                localStorage.setItem(
-                    "jkwiToken",
-                    data.token
-                );
-
-                localStorage.setItem(
-                    "jkwiUser",
-                    JSON.stringify(data.user)
-                );
-
-            } else {
-
-                sessionStorage.setItem(
-                    "jkwiToken",
-                    data.token
-                );
-
-                sessionStorage.setItem(
-                    "jkwiUser",
-                    JSON.stringify(data.user)
-                );
-
-            }
+            sessionStorage.setItem("jkwiToken", data.token);
+            sessionStorage.setItem("jkwiUser", JSON.stringify(data.user));
 
 
             // ==========================================

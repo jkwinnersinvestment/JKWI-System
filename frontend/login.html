@@ -53,25 +53,18 @@
                 class="login-form"
                 id="loginForm"
             >
-                <!-- WINNERS ID -->
                 <div class="form-group">
-                    <label for="winnersId">
-                        Winners ID
+                    <label for="email">
+                        Email Address
                     </label>
                     <input
-                        type="text"
-                        id="winnersId"
-                        name="winnersId"
-                        placeholder="Enter your 10-digit Winners ID"
-                        inputmode="numeric"
-                        maxlength="10"
-                        pattern="[0-9]{10}"
-                        autocomplete="username"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
                         required
                     >
-                    <small class="input-help">
-                        Your Winners ID must contain 10 digits.
-                    </small>
                 </div>
                 <!-- PASSWORD -->
                 <div class="form-group">
@@ -95,22 +88,6 @@
                             Show
                         </button>
                     </div>
-                </div>
-                <!-- OPTIONS -->
-                <div class="login-options">
-                    <label class="remember">
-                        <input
-                            type="checkbox"
-                            id="remember"
-                            name="remember"
-                        >
-                        <span>
-                            Remember me
-                        </span>
-                    </label>
-                    <a href="#">
-                        Forgot password?
-                    </a>
                 </div>
                 <!-- LOGIN BUTTON -->
                 <button

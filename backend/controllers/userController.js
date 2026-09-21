@@ -1,5 +1,4 @@
 const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
 const db = require("../config/database");
 
 
@@ -90,7 +89,6 @@ exports.register = async (req, res) => {
         lastName,
         email,
         phone,
-        idNumber,
         password,
         confirmPassword,
         accountType
@@ -106,7 +104,6 @@ exports.register = async (req, res) => {
         !lastName ||
         !email ||
         !phone ||
-        !idNumber ||
         !password ||
         !confirmPassword ||
         !accountType
@@ -123,18 +120,6 @@ exports.register = async (req, res) => {
 
     }
 
-
-    if (!/^\S+@\S+\.\S+$/.test(email.trim())) {
-        return res.status(400).json({ success: false, message: "Please provide a valid email address." });
-    }
-
-    if (!/^(?:0|\+27)[678]\d{8}$/.test(phone.replace(/[\s-]/g, ""))) {
-        return res.status(400).json({ success: false, message: "Please provide a valid South African phone number." });
-    }
-
-    if (!/^\d{13}$/.test(idNumber)) {
-        return res.status(400).json({ success: false, message: "ID Number must contain exactly 13 digits." });
-    }
 
     // ==========================================
     // ACCOUNT TYPE
@@ -189,6 +174,7 @@ exports.register = async (req, res) => {
 
         });
 
+    }
 
 
     const normalizedEmail =
@@ -287,13 +273,12 @@ exports.register = async (req, res) => {
                             first_name,
                             last_name,
                             email,
-                            id_number,
                             phone,
                             password,
                             account_type,
                             status
                         )
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                         `,
                         [
 
@@ -304,8 +289,6 @@ exports.register = async (req, res) => {
                             lastName.trim(),
 
                             normalizedEmail,
-
-                            idNumber,
 
                             phone.trim(),
 
@@ -387,54 +370,4 @@ exports.register = async (req, res) => {
 
     }
 
-};
-
-exports.login = async (req, res) => {
-    const email = String(req.body.email || "").trim().toLowerCase();
-    const password = String(req.body.password || "");
-
-    if (!/^\S+@\S+\.\S+$/.test(email) || !password) {
-        return res.status(400).json({ success: false, message: "Email and password are required." });
-    }
-
-    try {
-        const [users] = await db.promise().query(
-            `SELECT id, jkwi_id, first_name, last_name, email, password,
-                    account_type, status, email_verified
-             FROM users WHERE email = ? LIMIT 1`,
-            [email]
-        );
-
-        if (!users.length || !(await bcrypt.compare(password, users[0].password))) {
-            return res.status(401).json({ success: false, message: "Invalid email or password." });
-        }
-
-        const user = users[0];
-        if (user.status === "suspended" || user.status === "deactivated") {
-            return res.status(403).json({ success: false, message: "Your account is not available." });
-        }
-
-        const token = jwt.sign(
-            { id: user.id, email: user.email, accountType: user.account_type },
-            process.env.JWT_SECRET || "JKWI_CHANGE_THIS_SECRET",
-            { expiresIn: "8h" }
-        );
-
-        return res.json({
-            success: true,
-            token,
-            user: {
-                id: user.id,
-                email: user.email,
-                firstName: user.first_name,
-                lastName: user.last_name,
-                accountType: user.account_type,
-                status: user.status
-            },
-            redirect: "/customer/dashboard.html"
-        });
-    } catch (error) {
-        console.error("User login error:", error);
-        return res.status(500).json({ success: false, message: "Unable to sign in right now." });
-    }
 };
